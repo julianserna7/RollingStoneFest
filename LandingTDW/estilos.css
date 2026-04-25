@@ -1,0 +1,176 @@
+html {
+    background-color: #2C191D;
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: #E4C599;
+    height: 80px;
+    margin: 0px;
+    padding: 0px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #2C191D;
+    color: #2C191D;
+}
+
+header nav ul {
+    display: flex;          /* Pone los li en fila */
+    list-style: none;       /* Quita los puntos negros */
+    margin: 0;
+    padding: 0;
+    align-items: center;    /* Centra los items verticalmente */
+}
+
+header nav ul li {
+    margin-left: 30px;      /* Espacio entre cada link */
+    cursor: pointer;        /* Para que parezca un link al pasar el mouse */
+}
+
+h1 {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 64px;
+    text-align: left;
+}
+
+h2 {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+p, ul, li {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+/** SECCIONES **/
+
+.portada {
+    background-image: url('./imagenes/portada.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    padding: 120px 64px 120px 64px;
+    border-bottom: solid #2C191D 4px;
+    color: #2C191D;
+}
+
+
+.seccion1 {
+    background-color: #6E602F;
+    margin: 0;
+    padding: 64;
+    min-height: 100vh;
+    border-bottom: solid #2C191D 4px;
+    color: #E4C599;
+}
+
+.seccion2 {
+    background-color: #E4C599;
+    margin: 0;
+    padding: 64;
+    min-height: 50vh;
+    border-bottom: solid #2C191D 4px;
+    color: #2C191D;
+}
+
+.seccion3 {
+    background-color: #E4C599;
+    margin: 0;
+    padding: 64;
+    min-height: 50vh;
+    border-bottom: solid #2C191D 4px;
+    color: #2C191D;
+}
+
+.seccion4 {
+    background-color: #F69A45;
+    margin: 0;
+    padding: 64;
+    min-height: 100vh;
+    border-bottom: solid #D15231 4px;
+    color: #2C191D;
+}
+
+.tarjeta {
+    background-color: #E4C599;
+    border: 4px #2C191D solid;
+    box-shadow: 8px 8px #2C191D;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    max-width: 414px;
+    height: 434px;
+    padding: 38px;
+    margin: 0;
+}
+
+.tarjeta img {
+    /** width: 90%; **/
+    border: solid #2C191D 4px;
+    border-radius: 8px;
+}
+
+.contenedorTarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 900px;
+    justify-items: center;
+    align-items: center;
+    padding: 48px;
+    margin: 0 auto;
+}
+
+.formulario {
+    background-color: #2C191D;
+    border-bottom: solid #D15231 4px;
+    padding: 64px;
+    margin: 0;
+    color: #E4C599;
+}
+
+@media (max-width: 980px) {
+    .contenedorTarjetas {
+        /* Cambia a 1 sola columna (1 fila por tarjeta) */
+        grid-template-columns: 1fr; 
+        padding: 16px;
+        gap: 24px;
+    }
+
+    .tarjeta {
+        height: auto; /* Permite que la tarjeta se adapte si el texto crece */
+        min-height: 400px;
+    }
+}
