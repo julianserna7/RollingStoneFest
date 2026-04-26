@@ -19,16 +19,16 @@ header {
 }
 
 header nav ul {
-    display: flex;          /* Pone los li en fila */
-    list-style: none;       /* Quita los puntos negros */
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
-    align-items: center;    /* Centra los items verticalmente */
+    align-items: center;
 }
 
 header nav ul li {
-    margin-left: 30px;      /* Espacio entre cada link */
-    cursor: pointer;        /* Para que parezca un link al pasar el mouse */
+    margin-left: 30px;
+    cursor: pointer;
 }
 
 h1 {
@@ -63,10 +63,17 @@ h4 {
     text-align: center;
 }
 
-p, ul, li {
+p,
+ul,
+li {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
 }
+
+.resaltado {
+    color: #D15231;
+}
+
 
 /** SECCIONES **/
 
@@ -81,7 +88,6 @@ p, ul, li {
     border-bottom: solid #2C191D 4px;
     color: #2C191D;
 }
-
 
 .seccion1 {
     background-color: #6E602F;
@@ -101,35 +107,38 @@ p, ul, li {
     color: #2C191D;
 }
 
-/** GRILLAS **/
-
-.grilla{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, auto) ;
-
-    border: solid #2C191D 2px;
-    border-radius: 8px;
-    overflow: hidden;        
-    box-shadow: 8px 8px #2C191D;   
-    margin: 0 64px;
-
-
+footer {
+    padding: 32px 64px;
+    text-align: center;
+    color: #E4C599;
 }
 
-.grilla p{
+
+/** GRILLAS **/
+
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    border: solid #2C191D 2px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 8px 8px #2C191D;
+    margin: 0 64px;
+}
+
+.grilla p {
     border: solid #2C191D 2px;
     padding: 16px;
     margin: 0;
     border-bottom: solid #2C191D 2px;
     text-align: left;
     padding: 24px 32px;
-
 }
 
-.fila{
+.fila {
     border-bottom: solid #2C191D 2px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .fila:last-child {
@@ -143,7 +152,7 @@ p, ul, li {
 }
 
 .respuesta {
-    display: none;           
+    display: none;
     padding: 0px 32px 24px 32px;
     margin: 0;
     text-align: left;
@@ -151,15 +160,16 @@ p, ul, li {
 }
 
 .fila.abierta .respuesta {
-    display: block; 
-    
+    display: block;
 }
-.fila.abierta .pregunta{
+
+.fila.abierta .pregunta {
     background-color: #2C191D;
     color: #E4C599;
 }
 
 /** FIN DE GRILLAS **/
+
 
 .seccion3 {
     background-color: #E4C599;
@@ -178,6 +188,7 @@ p, ul, li {
     border-bottom: solid #D15231 4px;
     color: #2C191D;
 }
+
 
 /** TARJETAS **/
 
@@ -204,8 +215,6 @@ p, ul, li {
     border-radius: 8px;
 }
 
-
-
 .contenedorTarjetas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -219,6 +228,7 @@ p, ul, li {
 
 /** FIN DE TARJETAS **/
 
+
 .formulario {
     background-color: #2C191D;
     border-bottom: solid #D15231 4px;
@@ -227,77 +237,129 @@ p, ul, li {
     color: #E4C599;
 }
 
-.carta{
+.carta {
     background-color: #E4C599;
     border: 4px #2C191D solid;
     padding: 32px 48px;
-    
     color: #2C191D;
     box-shadow: 8px 8px #E4C599;
     border-radius: 8px;
-
 }
 
-input[type="text"]{
+input[type="text"] {
     padding: 8px 8px;
     border: 2px #2C191D solid;
     border-radius: 8px;
-    color: #2C191D; 
+    color: #2C191D;
     margin-top: 8px;
-    
 }
 
-input[type="email"]{
-    
+input[type="email"] {
     padding: 8px 8px;
     border: 2px #2C191D solid;
     border-radius: 8px;
-    color: #2C191D; 
+    color: #2C191D;
     margin-top: 8px;
-    
+
 }
 
-input[type="submit"]{
+input[type="submit"] {
     background-color: #D15231;
     border: 2px #2C191D solid;
     border-radius: 8px;
     box-shadow: 4px 4px #2C191D;
-
     font-family: "Poppins", sans-serif;
     font-size: 24px;
     font-weight: 800;
     color: #E4C599;
     text-align: center;
-
-    padding: 14px 10px;
+    padding: 16px 16px;
     cursor: pointer;
-
-
-
 }
 
-.carta h1{
-    text-align: center;
-}
-.carta p{
+.carta h1 {
     text-align: center;
 }
 
 select {
-  appearance: base-select;
-
- /** border: 2px solid #2C191D;
+    appearance: base-select;
+    /* border: 2px solid #2C191D;
   border-radius: 8px;
   width: 200px;
-  height: 130px; **/
+  height: 130px; */
 }
 
 option::checkmark {
-  order: 1;
-  margin-left: auto;
-  
+    order: 1;
+    margin-left: auto;
+
 }
-/**
+
+/* LISTAS DESPLEGABLES */
+
+.dropdown {
+    position: relative;
+    display: block;
+    margin-top: 8px;
+}
+
+.dropbtn {
+    background-color: white;
+    color: #2C191D;
+    padding: 10px 12px;
+    border: 2px solid #2C191D;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 230px;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 230px;
+    box-shadow: 8px 8px 0px #2C191D;
+    z-index: 10;
+    border: 2px solid #2C191D;
+    border-radius: 8px;
+    margin-top: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content label {
+    color: #2C191D;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.dropdown-content label:hover {
+    background-color: #F69A45;
+}
+
+.dropdown-content input {
+    margin-right: 10px;
+}
+
+/* Ajuste para que los inputs de texto ocupen el ancho total igual que los botones */
+input[type="text"],
+input[type="email"] {
+    width: 230px;
+    box-sizing: border-box;
+}
+
+/*
 option {
   
   padding: 10px;
@@ -308,18 +370,19 @@ option {
 option:nth-of-type(odd) {
   background: white;
 }
-**/
+*/
 
 @media (max-width: 980px) {
     .contenedorTarjetas {
         /* Cambia a 1 sola columna (1 fila por tarjeta) */
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         padding: 16px;
         gap: 24px;
     }
 
     .tarjeta {
-        height: auto; /* Permite que la tarjeta se adapte si el texto crece */
+        height: auto;
+        /* Permite que la tarjeta se adapte si el texto crece */
         min-height: 400px;
     }
 }

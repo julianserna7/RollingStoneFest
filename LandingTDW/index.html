@@ -38,7 +38,7 @@
     </header>
 
     <section class="Portada">
-        <h1>Viví el festival que va a marcar el año</h1>
+        <h1>Viví el <span class="resaltado">festival</span> que va a marcar el año</h1>
         <p>Un evento único que reúne a los artistas más destacados del momento. Registrate para recibir novedades,
             enterarte antes que nadie de la preventa exclusiva y las actividades complementarias.</p>
     </section>
@@ -74,35 +74,37 @@
     <section class="seccion3" id="preguntas">
         <h2>Preguntas frecuentes</h2>
         <h4>Resolvé tus dudas antes de registrarte</h4>
-        <section class="grilla" >
+        <section class="grilla">
             <div class="fila">
-            <p class="pregunta">¿Desde qué edad se puede ingresar al festival?</p>
-            <p class="respuesta">El ingreso está habilitado a partir de los 16 años, presentando DNI.</p>
+                <p class="pregunta">¿Desde qué edad se puede ingresar al festival?</p>
+                <p class="respuesta">El ingreso está habilitado a partir de los 16 años, presentando DNI.</p>
             </div>
 
             <div class="fila">
-            <p class="pregunta">¿A qué hora abre el predio?</p>
-            <p class="respuesta">Las puertas se habilitan a las 14:00 hs.</p>
+                <p class="pregunta">¿A qué hora abre el predio?</p>
+                <p class="respuesta">Las puertas se habilitan a las 14:00 hs.</p>
             </div>
 
             <div class="fila">
-            <p class="pregunta">¿A qué hora finaliza?</p>
-            <p class="respuesta">La jornada se extenderá hasta las 22.00 hs</p>
+                <p class="pregunta">¿A qué hora finaliza?</p>
+                <p class="respuesta">La jornada se extenderá hasta las 22.00 hs</p>
             </div>
 
             <div class="fila">
-            <p class="pregunta">¿Se puede ingresar con comida o bebida?</p>
-            <p class="respuesta">No está permitido el ingreso con comida ni bebida al predio.</p>
+                <p class="pregunta">¿Se puede ingresar con comida o bebida?</p>
+                <p class="respuesta">No está permitido el ingreso con comida ni bebida al predio.</p>
             </div>
 
             <div class="fila">
-            <p class="pregunta">¿Está permitido ingresar con mochilas o bolsas?</p>
-            <p class="respuesta">Sí, se permite el ingreso con mochilas pequeñas, sujetas a control en el acceso.</p>
+                <p class="pregunta">¿Está permitido ingresar con mochilas o bolsas?</p>
+                <p class="respuesta">Sí, se permite el ingreso con mochilas pequeñas, sujetas a control en el acceso.
+                </p>
             </div>
 
             <div class="fila">
-            <p class="pregunta">¿Qué pasa si llueve?</p>
-            <p class="respuesta">El evento se realiza aunque llueva, salvo que las condiciones climáticas representen un riesgo para el público o los artistas.</p>
+                <p class="pregunta">¿Qué pasa si llueve?</p>
+                <p class="respuesta">El evento se realiza aunque llueva, salvo que las condiciones climáticas
+                    representen un riesgo para el público o los artistas.</p>
             </div>
 
         </section>
@@ -137,47 +139,60 @@
 
     <section class="formulario" id="registrate">
         <div class="carta">
-        <h1>Recibí novedades del festival</h1>
-        <p>Registrate y enterate antes que nadie de todas las novedades.</p>
+            <h1>Recibí <span class="resaltado">novedades</span> del festival</h1>
+            <h4>Registrate y enterate antes que nadie de todas las novedades.</h4>
 
-        <form>
+            <form action="#">
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre">
 
-            <label for="Nombre">Nombre</label>
-            <br>
-            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre">
+                <br><br>
 
-            <br>
-            <br>
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="Escribe tu email">
 
-            <label for="Email">Email</label>
-            <br>
-            <input type="email" name="email" id="email" placeholder="Escribe tu email">
+                <br><br>
 
-            <br>
-            <br>
+                <label>Género musical preferido:</label><br />
+                <div class="dropdown">
+                    <button type="button" class="dropbtn" id="btn-genero">Seleccionar géneros ▼</button>
+                    <div class="dropdown-content">
+                        <label><input type="checkbox" name="genero" value="nacional"> Rock nacional</label>
+                        <label><input type="checkbox" name="genero" value="rock"> Rock clásico</label>
+                        <label><input type="checkbox" name="genero" value="pop"> Pop</label>
+                        <label><input type="checkbox" name="genero" value="indie"> Indie</label>
+                        <label><input type="checkbox" name="genero" value="electronica"> Electrónica</label>
+                        <label><input type="checkbox" name="genero" value="urbano"> Trap / Urbano</label>
+                    </div>
+                </div>
 
-            <label for="Genero Musical Preferido">Genero Musical Preferido...:</label><br />
-              <select id="Genero Musical Preferido" multiple>
-             <option value="Pop">Pop</option>
-              <option value="Rock">Rock</option>
-                <option value="Rap">Rap</option>
-                <option value="Electronica">Electronica</option>
-             <option value="Reggaeton">Reggaeton</option>
-            </select>
+                <br><br>
 
-            <br>
-            <br>
+                <label>¿Cómo te enteraste del evento?:</label><br />
+                <div class="dropdown">
+                    <button type="button" class="dropbtn" id="btn-fuente">Seleccionar opción ▼</button>
+                    <div class="dropdown-content">
+                        <label><input type="radio" name="fuente" value="rrss"> Anuncios en redes sociales</label>
+                        <label><input type="radio" name="fuente" value="newsletter"> Mails / Newsletters</label>
+                        <label><input type="radio" name="fuente" value="recomendacion"> Recomendación</label>
+                        <label><input type="radio" name="fuente" value="noticias"> Páginas de noticias</label>
+                        <label><input type="radio" name="fuente" value="otros"> Otros</label>
+                    </div>
+                </div>
 
-            <input type="submit" value="QUIERO RECIBIR MAS NOVEDADES">
+                <br><br>
 
-        </form>
+                <input type="submit" value="QUIERO RECIBIR MÁS NOVEDADES">
+            </form>
         </div>
     </section>
 
     <footer>
-        <h3> ©2026 Rolling Stone Fest 2026</h3>
+        <p> © Rolling Stone Fest 2026</p>
     </footer>
+
     <script src="script.js"></script>
+    
 </body>
 
 </html>
