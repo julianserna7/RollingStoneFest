@@ -114,8 +114,6 @@ p, ul, li {
     box-shadow: 8px 8px #2C191D;   
     margin: 0 64px;
 
-  
-    
 
 }
 
@@ -129,13 +127,45 @@ p, ul, li {
 
 }
 
+.fila{
+    border-bottom: solid #2C191D 2px;
+    cursor: pointer; 
+}
+
+.fila:last-child {
+    border-bottom: none;
+}
+
+.pregunta {
+    padding: 24px 32px;
+    margin: 0;
+    text-align: left;
+}
+
+.respuesta {
+    display: none;           
+    padding: 0px 32px 24px 32px;
+    margin: 0;
+    text-align: left;
+    color: #2C191D;
+}
+
+.fila.abierta .respuesta {
+    display: block; 
+    
+}
+.fila.abierta .pregunta{
+    background-color: #2C191D;
+    color: #E4C599;
+}
+
 /** FIN DE GRILLAS **/
 
 .seccion3 {
     background-color: #E4C599;
     margin: 0;
     padding: 64;
-    min-height: 50vh;
+    min-height: 75vh;
     border-bottom: solid #2C191D 4px;
     color: #2C191D;
 }
@@ -199,10 +229,58 @@ p, ul, li {
 
 .carta{
     background-color: #E4C599;
-    border: #2C191D;
+    border: 4px #2C191D solid;
     padding: 32px 48px;
+    
     color: #2C191D;
+    box-shadow: 8px 8px #E4C599;
+    border-radius: 8px;
 
+}
+
+input[type="text"]{
+    padding: 8px 8px;
+    border: 2px #2C191D solid;
+    border-radius: 8px;
+    color: #2C191D; 
+    margin-top: 8px;
+    
+}
+
+input[type="email"]{
+    
+    padding: 8px 8px;
+    border: 2px #2C191D solid;
+    border-radius: 8px;
+    color: #2C191D; 
+    margin-top: 8px;
+    
+}
+
+input[type="submit"]{
+    background-color: #D15231;
+    border: 2px #2C191D solid;
+    border-radius: 8px;
+    box-shadow: 4px 4px #2C191D;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #E4C599;
+    text-align: center;
+
+    padding: 14px 10px;
+    cursor: pointer;
+
+
+
+}
+
+.carta h1{
+    text-align: center;
+}
+.carta p{
+    text-align: center;
 }
 
 select {
