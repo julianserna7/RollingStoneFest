@@ -74,16 +74,16 @@
     <section class="seccion3" id="preguntas">
         <h2>Preguntas frecuentes</h2>
         <h4>Resolvé tus dudas antes de registrarte</h4>
-        <div>
-            <ul>
-                <li>¿Desde qué edad se puede ingresar al festival?</li>
-                <li>¿A qué hora abre el predio?</li>
-                <li>¿A qué hora finaliza?</li>
-                <li>¿Se puede ingresar con comida o bebida?</li>
-                <li>¿Está permitido ingresar con mochilas o bolsas?</li>
-                <li>¿Qué pasa si llueve?</li>
-            </ul>
-        </div>
+        <section class="grilla" >
+
+            <p class="g1">¿Desde qué edad se puede ingresar al festival?</p>
+            <p class="g2">¿A qué hora abre el predio?</p>
+            <p class="g3">¿A qué hora finaliza?</p>
+            <p class="g4">¿Se puede ingresar con comida o bebida?</p>
+            <p class="g5">¿Está permitido ingresar con mochilas o bolsas?</p>
+            <p class="g6">¿Qué pasa si llueve?</p>
+
+        </section>
     </section>
 
     <section class="seccion4" id="beneficios">
@@ -114,8 +114,40 @@
     </section>
 
     <section class="formulario" id="registrate">
+        <div class="carta">
         <h1>Recibí novedades del festival</h1>
         <p>Registrate y enterate antes que nadie de todas las novedades.</p>
+
+        <form>
+
+            <label for="Nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre">
+
+            <br>
+            <br>
+
+            <label for="Email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Escribe tu email">
+
+            <br>
+            <br>
+
+            <label for="Genero Musical Preferido">Genero Musical Preferido...:</label><br />
+              <select id="Genero Musical Preferido" multiple>
+             <option value="Pop">Pop</option>
+              <option value="Rock">Rock</option>
+                <option value="Rap">Rap</option>
+                <option value="Electronica">Electronica</option>
+             <option value="Reggaeton">Reggaeton</option>
+            </select>
+
+            <br>
+            <br>
+
+            <input type="submit" value="QUIERO RECIBIR MAS NOVEDADES">
+
+        </form>
+        </div>
     </section>
 
     <footer>
