@@ -15,32 +15,27 @@
 <body>
 
     <header>
-        <h3>Rolling Stone Fest 2026</h3>
+        <a href="#inicio" class="logo-fest">
+            <img src="./imagenes/logo-festival.png" alt="Logo Rolling Stone Fest">
+        </a>
+
         <nav>
             <ul>
-                <li>
-                    <a href="#festival">Sobre el festival</a>
-                </li>
-                <li>
-                    <a href="#ubicacion">Ubicación</a>
-                </li>
-                <li>
-                    <a href="#preguntas">Preguntas</a>
-                </li>
-                <li>
-                    <a href="#beneficios">Beneficios</a>
-                </li>
-                <li>
-                    <a href="#registrate" class="registra">Registrate</a>
-                </li>
+                <li><a href="#festival">Sobre el festival</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#preguntas">Preguntas</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#registrate" class="botonregistrar">Registrate</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="Portada">
+    <section id="inicio" class="Portada">
         <h1>Viví el <span class="resaltado">festival</span> que va a marcar el año</h1>
-        <p>Un evento único que reúne a los artistas más destacados del momento te espera este viernes 13 y sábado 14 de
-            noviembre, con apertura de puertas a partir de las 14:00 hs. Enterate antes que nadie de la preventa
+        <p>Un evento único que reúne a los artistas más destacados del momento te espera este <span
+                class="resaltado">viernes 13 y sábado 14 de
+                noviembre</span>, con apertura de puertas a partir de las <span class="resaltado">14:00 hs</span>.
+            Enterate antes que nadie de la preventa
             exclusiva y las actividades complementarias.</p>
         <a href="#registrate" class="btn-registro">Registrate para recibir novedades</a>
     </section>
@@ -68,43 +63,43 @@
         <h2>Faltan...</h2>
 
         <section class="contador-section">
-    
-    <div class="contador">
-        <div class="bloque"> 
-            <div class="caja">
-                <span id="dias">00</span>
-            
+
+            <div class="contador">
+                <div class="bloque">
+                    <div class="caja">
+                        <span id="dias">00</span>
+
+                    </div>
+                    <p>Días</p>
+                </div>
+
+                <div class="bloque">
+                    <div class="caja">
+                        <span id="horas">00</span>
+
+                    </div>
+                    <p>Horas</p>
+                </div>
+
+                <div class="bloque">
+                    <div class="caja">
+                        <span id="minutos">00</span>
+
+                    </div>
+
+                    <p>Minutos</p>
+                </div>
+
+                <div class="bloque">
+                    <div class="caja">
+                        <span id="segundos">00</span>
+
+                    </div>
+                    <p>Segundos</p>
+                </div>
+
             </div>
-            <p>Días</p>
-        </div>
-
-        <div class="bloque">
-            <div class="caja">
-             <span id="horas">00</span>
-            
-            </div>
-            <p>Horas</p>
-        </div>
-
-        <div class="bloque">
-            <div class="caja">
-             <span id="minutos">00</span>
-            
-            </div>
-
-            <p>Minutos</p>
-        </div>
-
-        <div class="bloque">
-            <div class="caja">
-                <span id="segundos">00</span>
-            
-            </div>
-            <p>Segundos</p>
-        </div>
-
-    </div>
-</section>
+        </section>
 
     </section>
 
@@ -112,7 +107,8 @@
         <h2>Ubicación</h2>
         <h4>Hipódromo de San Isidro, Buenos Aires</h4>
 
-        <iframe class="mapa" src="https://maps.google.com/?output=embed&q=Hipodromo+de+San+Isidro%2C+Buenos+Aires&z=8"></iframe>
+        <iframe class="mapa"
+            src="https://maps.google.com/?output=embed&q=Hipodromo+de+San+Isidro%2C+Buenos+Aires&z=8"></iframe>
 
     </section>
 
@@ -183,58 +179,59 @@
     </section>
 
     <section class="formulario" id="registrate">
-    <div class="carta">
-        <h1>Recibí <span class="resaltado">novedades</span> del festival</h1>
-        <h4>Registrate y enterate antes que nadie de todas las novedades.</h4>
+        <div class="carta">
+            <h1>Recibí <span class="resaltado">novedades</span> del festival</h1>
+            <h4>Registrate y enterate antes que nadie de todas las novedades.</h4>
 
-        <form action="#">
-            <div class="grid">
+            <form action="#">
+                <div class="grid">
 
-                <div class="campo">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre">
-                </div>
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre">
+                    </div>
 
-                <div class="campo">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Escribe tu email">
-                </div>
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Escribe tu email">
+                    </div>
 
-                <div class="campo">
-                    <label>Género musical preferido:</label>
-                    <div class="dropdown">
-                        <button type="button" class="dropbtn" id="btn-genero">Seleccionar géneros ▼</button>
-                        <div class="dropdown-content">
-                            <label><input type="checkbox" name="genero" value="nacional"> Rock nacional</label>
-                            <label><input type="checkbox" name="genero" value="rock"> Rock clásico</label>
-                            <label><input type="checkbox" name="genero" value="pop"> Pop</label>
-                            <label><input type="checkbox" name="genero" value="indie"> Indie</label>
-                            <label><input type="checkbox" name="genero" value="electronica"> Electrónica</label>
-                            <label><input type="checkbox" name="genero" value="urbano"> Trap / Urbano</label>
+                    <div class="campo">
+                        <label>Género musical preferido:</label>
+                        <div class="dropdown">
+                            <button type="button" class="dropbtn" id="btn-genero">Seleccionar géneros ▼</button>
+                            <div class="dropdown-content">
+                                <label><input type="checkbox" name="genero" value="nacional"> Rock nacional</label>
+                                <label><input type="checkbox" name="genero" value="rock"> Rock clásico</label>
+                                <label><input type="checkbox" name="genero" value="pop"> Pop</label>
+                                <label><input type="checkbox" name="genero" value="indie"> Indie</label>
+                                <label><input type="checkbox" name="genero" value="electronica"> Electrónica</label>
+                                <label><input type="checkbox" name="genero" value="urbano"> Trap / Urbano</label>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="campo">
-                    <label>¿Cómo te enteraste del evento?:</label>
-                    <div class="dropdown">
-                        <button type="button" class="dropbtn" id="btn-fuente">Seleccionar opción ▼</button>
-                        <div class="dropdown-content">
-                            <label><input type="radio" name="fuente" value="rrss"> Anuncios en redes sociales</label>
-                            <label><input type="radio" name="fuente" value="newsletter"> Mails / Newsletters</label>
-                            <label><input type="radio" name="fuente" value="recomendacion"> Recomendación</label>
-                            <label><input type="radio" name="fuente" value="noticias"> Páginas de noticias</label>
-                            <label><input type="radio" name="fuente" value="otros"> Otros</label>
+                    <div class="campo">
+                        <label>¿Cómo te enteraste del evento?:</label>
+                        <div class="dropdown">
+                            <button type="button" class="dropbtn" id="btn-fuente">Seleccionar opción ▼</button>
+                            <div class="dropdown-content">
+                                <label><input type="radio" name="fuente" value="rrss"> Anuncios en redes
+                                    sociales</label>
+                                <label><input type="radio" name="fuente" value="newsletter"> Mails / Newsletters</label>
+                                <label><input type="radio" name="fuente" value="recomendacion"> Recomendación</label>
+                                <label><input type="radio" name="fuente" value="noticias"> Páginas de noticias</label>
+                                <label><input type="radio" name="fuente" value="otros"> Otros</label>
+                            </div>
                         </div>
                     </div>
+
                 </div>
 
-            </div>
-
-            <input type="submit" value="QUIERO RECIBIR MÁS NOVEDADES">
-        </form>
-    </div>
-</section>
+                <input type="submit" value="QUIERO RECIBIR MÁS NOVEDADES">
+            </form>
+        </div>
+    </section>
 
     <footer>
         <p> © Rolling Stone Fest 2026</p>
