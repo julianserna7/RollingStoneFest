@@ -106,16 +106,56 @@ li {
 
 /** SECCIONES **/
 
-.portada {
+/** AJUSTES EN SECCIÓN PORTADA **/
+.Portada {
     background-image: url('./imagenes/portada.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 70vh;
     margin: 0;
-    padding: 120px 64px 120px 64px;
+    /* Ajuste de padding para dar aire y alinear a la izquierda como en Figma */
+    padding: 80px 64px; 
     border-bottom: solid #2C191D 4px;
     color: #2C191D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Portada h1 {
+    max-width: 600px; 
+    line-height: 1.1;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
+.Portada p {
+    max-width: 550px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.btn-registro {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #D15231; 
+    color: #E4C599; 
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border: 3px solid #2C191D;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 4px 4px #2C191D; 
+    transition: transform 0.1s;
+}
+
+.btn-registro:active {
+    transform: translateY(2px);
+    box-shadow: 3px 3px #2C191D;
 }
 
 .seccion1 {
@@ -136,14 +176,16 @@ li {
     color: #2C191D;
 }
 
-footer {
-    padding: 32px 64px;
-    text-align: center;
-    color: #E4C599;
+.seccion3 {
+    background-color: #E4C599;
+    margin: 0;
+    padding: 64;
+    min-height: 75vh;
+    border-bottom: solid #2C191D 4px;
+    color: #2C191D;
 }
 
-
-/** GRILLAS **/
+/* GRILLAS PREGUNTAS FRECUENTES */
 
 .grilla {
     display: grid;
@@ -197,17 +239,7 @@ footer {
     color: #E4C599;
 }
 
-/** FIN DE GRILLAS **/
-
-
-.seccion3 {
-    background-color: #E4C599;
-    margin: 0;
-    padding: 64;
-    min-height: 75vh;
-    border-bottom: solid #2C191D 4px;
-    color: #2C191D;
-}
+/* FIN DE GRILLA */
 
 .seccion4 {
     background-color: #F69A45;
@@ -310,18 +342,9 @@ input[type="submit"] {
     text-align: center;
 }
 
-select {
-    appearance: base-select;
-    /* border: 2px solid #2C191D;
-  border-radius: 8px;
-  width: 200px;
-  height: 130px; */
-}
-
 option::checkmark {
     order: 1;
     margin-left: auto;
-
 }
 
 /* LISTAS DESPLEGABLES */
@@ -381,25 +404,18 @@ option::checkmark {
     margin-right: 10px;
 }
 
-/* Ajuste para que los inputs de texto ocupen el ancho total igual que los botones */
 input[type="text"],
 input[type="email"] {
     width: 230px;
     box-sizing: border-box;
 }
 
-/*
-option {
-  
-  padding: 10px;
-  height: 40px;
-  outline: none;
+footer {
+    padding: 32px 64px;
+    text-align: center;
+    color: #E4C599;
 }
 
-option:nth-of-type(odd) {
-  background: white;
-}
-*/
 
 /** COMIENZO CONTADOR **/
 
@@ -509,6 +525,3 @@ option:nth-of-type(odd) {
     }
 
 }
-
-/** holoo **/
-
