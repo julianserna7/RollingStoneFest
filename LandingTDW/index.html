@@ -183,54 +183,58 @@
     </section>
 
     <section class="formulario" id="registrate">
-        <div class="carta">
-            <h1>Recibí <span class="resaltado">novedades</span> del festival</h1>
-            <h4>Registrate y enterate antes que nadie de todas las novedades.</h4>
+    <div class="carta">
+        <h1>Recibí <span class="resaltado">novedades</span> del festival</h1>
+        <h4>Registrate y enterate antes que nadie de todas las novedades.</h4>
 
-            <form action="#">
-                <label for="nombre">Nombre</label><br>
-                <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre">
+        <form action="#">
+            <div class="grid">
 
-                <br><br>
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre">
+                </div>
 
-                <label for="email">Email</label><br>
-                <input type="email" name="email" id="email" placeholder="Escribe tu email">
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Escribe tu email">
+                </div>
 
-                <br><br>
-
-                <label>Género musical preferido:</label><br />
-                <div class="dropdown">
-                    <button type="button" class="dropbtn" id="btn-genero">Seleccionar géneros ▼</button>
-                    <div class="dropdown-content">
-                        <label><input type="checkbox" name="genero" value="nacional"> Rock nacional</label>
-                        <label><input type="checkbox" name="genero" value="rock"> Rock clásico</label>
-                        <label><input type="checkbox" name="genero" value="pop"> Pop</label>
-                        <label><input type="checkbox" name="genero" value="indie"> Indie</label>
-                        <label><input type="checkbox" name="genero" value="electronica"> Electrónica</label>
-                        <label><input type="checkbox" name="genero" value="urbano"> Trap / Urbano</label>
+                <div class="campo">
+                    <label>Género musical preferido:</label>
+                    <div class="dropdown">
+                        <button type="button" class="dropbtn" id="btn-genero">Seleccionar géneros ▼</button>
+                        <div class="dropdown-content">
+                            <label><input type="checkbox" name="genero" value="nacional"> Rock nacional</label>
+                            <label><input type="checkbox" name="genero" value="rock"> Rock clásico</label>
+                            <label><input type="checkbox" name="genero" value="pop"> Pop</label>
+                            <label><input type="checkbox" name="genero" value="indie"> Indie</label>
+                            <label><input type="checkbox" name="genero" value="electronica"> Electrónica</label>
+                            <label><input type="checkbox" name="genero" value="urbano"> Trap / Urbano</label>
+                        </div>
                     </div>
                 </div>
 
-                <br><br>
-
-                <label>¿Cómo te enteraste del evento?:</label><br />
-                <div class="dropdown">
-                    <button type="button" class="dropbtn" id="btn-fuente">Seleccionar opción ▼</button>
-                    <div class="dropdown-content">
-                        <label><input type="radio" name="fuente" value="rrss"> Anuncios en redes sociales</label>
-                        <label><input type="radio" name="fuente" value="newsletter"> Mails / Newsletters</label>
-                        <label><input type="radio" name="fuente" value="recomendacion"> Recomendación</label>
-                        <label><input type="radio" name="fuente" value="noticias"> Páginas de noticias</label>
-                        <label><input type="radio" name="fuente" value="otros"> Otros</label>
+                <div class="campo">
+                    <label>¿Cómo te enteraste del evento?:</label>
+                    <div class="dropdown">
+                        <button type="button" class="dropbtn" id="btn-fuente">Seleccionar opción ▼</button>
+                        <div class="dropdown-content">
+                            <label><input type="radio" name="fuente" value="rrss"> Anuncios en redes sociales</label>
+                            <label><input type="radio" name="fuente" value="newsletter"> Mails / Newsletters</label>
+                            <label><input type="radio" name="fuente" value="recomendacion"> Recomendación</label>
+                            <label><input type="radio" name="fuente" value="noticias"> Páginas de noticias</label>
+                            <label><input type="radio" name="fuente" value="otros"> Otros</label>
+                        </div>
                     </div>
                 </div>
 
-                <br><br>
+            </div>
 
-                <input type="submit" value="QUIERO RECIBIR MÁS NOVEDADES">
-            </form>
-        </div>
-    </section>
+            <input type="submit" value="QUIERO RECIBIR MÁS NOVEDADES">
+        </form>
+    </div>
+</section>
 
     <footer>
         <p> © Rolling Stone Fest 2026</p>

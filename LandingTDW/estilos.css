@@ -298,13 +298,55 @@ li {
     color: #E4C599;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+
+    text-align: left;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.campo label {
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    box-sizing: border-box; 
+    padding: 14px 12px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.dropbtn {           
+    box-sizing: border-box;
+    padding: 14px 12px;
+    font-size: 1rem;
+}
+
 .carta {
     background-color: #E4C599;
     border: 4px #2C191D solid;
-    padding: 32px 48px;
+    padding: 24px 48px;
     color: #2C191D;
     box-shadow: 8px 8px #E4C599;
     border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    
+
+    text-align: center;
 }
 
 input[type="text"] {
@@ -336,6 +378,8 @@ input[type="submit"] {
     text-align: center;
     padding: 16px 16px;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
 }
 
 .carta h1 {
@@ -357,15 +401,22 @@ option::checkmark {
 
 .dropbtn {
     background-color: white;
-    color: #2C191D;
-    padding: 10px 12px;
-    border: 2px solid #2C191D;
-    border-radius: 8px;
     cursor: pointer;
-    width: 230px;
+
     text-align: left;
+    font-size: 14px;
+
+    width: 100%;
+    box-sizing: border-box; 
+    padding: 14px 12px;
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+
+    padding: 8px 8px;
+    border: 2px #2C191D solid;
+    border-radius: 8px;
+    
+    margin-top: 8px;
+    color: gray;
 }
 
 .dropdown-content {
@@ -404,17 +455,93 @@ option::checkmark {
     margin-right: 10px;
 }
 
-input[type="text"],
+
+/**input[type="text"],
 input[type="email"] {
     width: 230px;
     box-sizing: border-box;
-}
+} **/
 
 footer {
     padding: 32px 64px;
     text-align: center;
     color: #E4C599;
 }
+
+
+/** COMIENZO CONTADOR **/
+
+.contador-section {
+    padding: 70px;
+    text-align: center;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    background-color: #9D8959;
+    border: solid #2C191D 4px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 0px #2C191D;
+    padding: 16px;
+    width: fit-content;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.caja {
+    background-color: #E4C599;   /* beige */
+    border-radius: 8px;
+    padding: 0px;
+    min-width: 120px;
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.caja span {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    padding: auto;
+    font-size: 66px;
+    font-weight: bold;
+    color: #2C191D;
+}
+
+.bloque p {
+    margin: 4px 0 0 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #E4C599;
+}
+
+/** FIN CONTADOR **/
+
+
+/** MAPA **/
+
+.mapa {
+    width: 100%;
+    height: 400px;
+    border: solid #2C191D 4px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 0px #2C191D;
+    
+}
+
+/** FIN MAPA **/
 
 
 /** COMIENZO CONTADOR **/
@@ -524,4 +651,6 @@ footer {
         font-size: 0.75rem;
     }
 
+
 }
+
