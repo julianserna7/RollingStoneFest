@@ -184,14 +184,46 @@ li {
     box-shadow: 3px 3px #2C191D;
 }
 
+
+
+
+
+
+
 .seccion1 {
     background-color: #6E602F;
     margin: 0;
-    padding: 64;
-    min-height: 100vh;
+    padding: 64px 80px;    
     border-bottom: solid #2C191D 4px;
     color: #E4C599;
 }
+
+.coso {
+    display: flex;
+    gap: 96px;
+    align-items: center;
+    justify-content: center;   
+}
+
+
+.lineup {
+    width: 600px;            
+    border-radius: 8px;
+    border: 4px #2C191D solid;
+    outline: 4px solid #E4C599;
+    box-shadow: 14px 14px #2C191D;
+    display: block;
+}
+
+.texto {                    
+    width: 400px;              
+}
+
+
+
+
+
+
 
 .seccion2 {
     background-color: #E4C599;
