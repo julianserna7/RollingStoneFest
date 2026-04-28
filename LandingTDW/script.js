@@ -7,7 +7,7 @@ filas.forEach(fila => {
     });
 });
 
-// Lógica para Géneros (Checkboxes - Múltiple)
+// Lógica para Checkboxes - Múltiple
 const checkboxes = document.querySelectorAll('input[name="genero"]');
 const btnGenero = document.getElementById('btn-genero');
 
@@ -17,7 +17,7 @@ checkboxes.forEach(cb => {
             .filter(i => i.checked)
             .map(i => i.parentElement.textContent.trim());
         
-        if(btnGenero) { // Verificamos que el botón exista
+        if(btnGenero) {
             btnGenero.innerText = seleccionados.length > 0 
                 ? seleccionados.join(', ') + " ▼" 
                 : "Seleccionar géneros ▼";
@@ -37,8 +37,8 @@ radios.forEach(rd => {
     });
 });
 
-// Cambiá esta fecha por la del festival
-const fechaFestival = new Date('2026-11-13T20:00:00');
+// Contador
+const fechaFestival = new Date('2026-11-13T14:00:00');
 
 function actualizarContador() {
     const ahora = new Date();
