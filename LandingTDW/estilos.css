@@ -24,6 +24,79 @@ header {
 }
 
 
+/* --- TIPOGRAFÍAS --- */
+
+h1 {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 64px;
+    text-align: left;
+    letter-spacing: 4%;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+h2 {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 4%;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+h3 {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+p, ul, li {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+ul {
+    text-align: center;
+}
+
+.resaltado {
+    color: #D15231;
+    font-weight: 900;
+}
+
+.resaltado2 {
+    color: #D15231;
+    font-weight: 700;
+}
+
+.resaltado3 {
+    color: #2C191D;
+    font-weight: 700;
+}
+
+.fuente-bold {
+    font-weight: bold;
+}
+
+/* --- FIN TIPOGRAFÍAS --- */
+
+
 /* --- NAV Y UL --- */
 
 header nav ul {
@@ -46,10 +119,10 @@ header nav a {
     transition: 0.2s;
 }
 
-.botonregistrar {
+.boton-nav {
     background-color: #D15231;
     color: #E4C599;
-    border: 2px #2C191D solid;
+    border: 3px #2C191D solid;
     border-radius: 8px;
     box-shadow: 4px 4px 0px #2C191D;
     font-weight: bold;
@@ -57,12 +130,12 @@ header nav a {
     display: inline-block;
 }
 
-.botonregistrar:active {
+.boton-nav:active {
     box-shadow: 2px 2px 0px #2C191D;
     transform: translate(2px, 2px);
 }
 
-.logo-fest { /* AJUSTES LOGO */
+.logo-fest {                           /* AJUSTES LOGO */
     display: flex;
     align-items: center;
     height: 100%;
@@ -77,61 +150,14 @@ header nav a {
 }
 
 .logo-fest:hover img {
-    opacity: 0.8; /
+    opacity: 0.8;
+}
+
+#menu-check, .menu-icono {
+    display: none;
 }
 
 /* --- FIN NAV Y UL --- */
-
-
-/* --- TIPOGRAFÍAS --- */
-
-h1 {
-    font-family: "Fraunces", serif;
-    font-optical-sizing: auto;
-    font-style: italic;
-    font-weight: 900;
-    font-size: 64px;
-    text-align: left;
-    letter-spacing: 4%;
-}
-
-h2 {
-    font-family: "Fraunces", serif;
-    font-optical-sizing: auto;
-    font-style: italic;
-    font-weight: 900;
-    font-size: 48px;
-    text-align: center;
-}
-
-h3 {
-    font-family: "Fraunces", serif;
-    font-optical-sizing: auto;
-    font-style: italic;
-    font-weight: 900;
-    font-size: 24px;
-}
-
-h4 {
-    font-family: "Poppins", sans-serif;
-    font-size: 18px;
-    text-align: center;
-}
-
-p, ul, li {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-}
-
-.resaltado {
-    color: #D15231;
-}
-
-.fontWeigth {
-    font-weight: bold;
-}
-
-/* --- FIN TIPOGRAFÍAS --- */
 
 
 /* --- PORTADA --- */
@@ -150,22 +176,26 @@ p, ul, li {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    /* 2. El degradado va DE COLOR SOLIDO a TRANSPARENTE, y luego la foto */
+        background-image: 
+            linear-gradient(to top, #E4C599 0%, rgba(228, 197, 153, 0) 50%),
+            url('./imagenes/portada.png');
 }
 
+
 .Portada h1 {
-    max-width: 600px; 
+    max-width: 650px; 
     line-height: 1.1;
     margin-bottom: 24px;
-    margin-top: 0;
 }
 
 .Portada p {
-    max-width: 550px;
+    max-width: 650px;
     line-height: 1.5;
     margin-bottom: 40px;
 }
 
-.btn-registro {
+.boton-portada {
     display: inline-block;
     text-decoration: none;
     background-color: #D15231; 
@@ -181,9 +211,9 @@ p, ul, li {
     transition: transform 0.1s;
 }
 
-.btn-registro:active {
+.boton-portada:active {
     transform: translateY(2px);
-    box-shadow: 3px 3px #2C191D;
+    box-shadow: 2px 2px #2C191D;
 }
 
 /* --- FIN PORTADA --- */
@@ -193,70 +223,82 @@ p, ul, li {
 
 .seccion1 {
     background-color: #6E602F;
-    margin: 0;
-    padding: 64px 80px;    
+    padding: 64px 64px;
     border-bottom: solid #2C191D 4px;
     color: #E4C599;
 }
 
-.coso {
+.grillaSec1 {
     display: flex;
-    gap: 96px;
+    gap: 64px;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
+    margin: 0 auto;
 }
 
+.contenedor-lineup {   
+    max-width: 510px; 
+    max-height: 638px;
+    background-color: #E4C599;
+    padding: 16px;
+    border: 4px solid #2C191D;
+    box-shadow: 8px 8px #2C191D;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .lineup {
-    width: 600px;            
+    width: 100%;
+    height: auto;
+    border: 4px solid #2C191D;
     border-radius: 8px;
-    border: 4px #2C191D solid;
-    outline: 4px solid #E4C599;
-    box-shadow: 14px 14px #2C191D;
     display: block;
 }
 
-.texto {                    
-    width: 400px;              
+.texto {
+    flex: 1;
+    max-width: 600px;
 }
 
-.contador-section {                    /* COMIENZO CONTADOR */
-    padding: 70px;
+.texto h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.texto p {
+    margin-bottom: 48px;
+    line-height: 1.6;
+}
+
+.seccion-contador {                /* COMIENZO CONTADOR */    
+    padding: 64px;
     text-align: center;
 }
 
-.contador {
+.contador {                            
     display: flex;
+    align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    max-width: 644px;
     gap: 16px;
     background-color: #9D8959;
     border: solid #2C191D 4px;
     border-radius: 8px;
     box-shadow: 8px 8px 0px #2C191D;
     padding: 16px;
-    width: fit-content;
-    margin: 0 auto;
-    width: fit-content;
 }
 
-.caja {
+.caja {                                
     background-color: #E4C599; 
     border-radius: 8px;
-    padding: 0px;
-    min-width: 120px;
-    width: 150px;
-    height: 150px;
-
+    width: 150px; 
+    aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.bloque {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
 }
 
 .caja span {
@@ -268,11 +310,17 @@ p, ul, li {
     color: #2C191D;
 }
 
+.bloque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .bloque p {
-    margin: 4px 0 0 0;
+    margin: 8px 0 0 0;
     font-family: "Poppins", sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
     color: #E4C599;
 }                                      /* FIN CONTADOR */
 
@@ -291,12 +339,17 @@ p, ul, li {
 }
 
 .mapa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     width: 100%;
+    max-width: 1140px;
     height: 400px;
     border: solid #2C191D 4px;
     border-radius: 8px;
     box-shadow: 8px 8px 0px #2C191D;
-    
+
 }
 
 /* --- FIN SECCIÓN 2 --- */
@@ -308,33 +361,31 @@ p, ul, li {
     background-color: #E4C599;
     margin: 0;
     padding: 64;
-    min-height: 75vh;
     border-bottom: solid #2C191D 4px;
     color: #2C191D;
 }
 
-.grilla {                              /* GRILLAS PREGUNTAS FRECUENTES */
+.grillaFAQ {                              /* GRILLAS PREGUNTAS FRECUENTES */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
-    border: solid #2C191D 2px;
+    max-width: 1140px;
+    border: solid #2C191D 4px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 8px 8px #2C191D;
-    margin: 0 64px;
+    margin: 0 auto;
 }
 
-.grilla p {
-    border: solid #2C191D 2px;
+.grillaFAQ p {
     padding: 16px;
-    margin: 0;
-    border-bottom: solid #2C191D 2px;
+    margin: 0;  
     text-align: left;
     padding: 24px 32px;
 }
 
 .fila {
-    border-bottom: solid #2C191D 2px;
+    border-bottom: solid #2C191D 4px;
     cursor: pointer;
 }
 
@@ -342,18 +393,19 @@ p, ul, li {
     border-bottom: none;
 }
 
-.pregunta {
-    padding: 24px 32px;
-    margin: 0;
+.pregunta {  
     text-align: left;
+    font-weight: bold;
 }
 
 .respuesta {
     display: none;
-    padding: 0px 32px 24px 32px;
-    margin: 0;
     text-align: left;
     color: #2C191D;
+}
+
+.respuesta-margin {
+    margin: 64px;
 }
 
 .fila.abierta .respuesta {
@@ -379,8 +431,17 @@ p, ul, li {
     color: #2C191D;
 }
 
+.contenedorTarjetas {                  /* TARJETAS */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+    max-width: 890px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+}              
 
-.tarjeta {                             /* TARJETAS */
+.tarjeta {                             
     background-color: #E4C599;
     border: 4px #2C191D solid;
     box-shadow: 8px 8px #2C191D;
@@ -397,20 +458,13 @@ p, ul, li {
     margin: 0;
 }
 
+.tarjeta h4 {
+    margin: 16px 0 0 0;
+}
+
 .tarjeta img {
     border: solid #2C191D 4px;
     border-radius: 8px;
-}
-
-.contenedorTarjetas {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    max-width: 900px;
-    justify-items: center;
-    align-items: center;
-    padding: 48px;
-    margin: 0 auto;
 }                                      /* FIN DE TARJETAS */
 
 /* --- FIN SECCIÓN 4 --- */
@@ -426,20 +480,16 @@ p, ul, li {
     color: #E4C599;
 }
 
-.grid {
+.grillaForm {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 32px;
-
+    gap: 48px;
     text-align: left;
 }
 
 .campo {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-
 }
 
 .campo label {
@@ -448,7 +498,6 @@ p, ul, li {
     font-family: "Poppins", sans-serif;
 }
 
-
 .carta {
     background-color: #E4C599;
     border: 4px #2C191D solid;
@@ -456,18 +505,20 @@ p, ul, li {
     color: #2C191D;
     box-shadow: 8px 8px #E4C599;
     border-radius: 8px;
-    max-width: 800px;
+    max-width: 990px;
     margin: 0 auto;
     text-align: center;
 }
 
 .carta h1 {
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 24px;
 }
 
 input[type="text"], input[type="email"] {
     padding: 8px 8px;
-    border: 2px #2C191D solid;
+    border: 3px #2C191D solid;
     border-radius: 8px;
     color: #2C191D;
     margin-top: 8px;
@@ -477,7 +528,7 @@ input[type="text"], input[type="email"] {
 
 input[type="submit"] {
     background-color: #D15231;
-    border: 2px #2C191D solid;
+    border: 3px #2C191D solid;
     border-radius: 8px;
     box-shadow: 4px 4px #2C191D;
     font-family: "Poppins", sans-serif;
@@ -488,13 +539,16 @@ input[type="submit"] {
     padding: 16px 16px;
     cursor: pointer;
     display: block;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 510px;
+    margin: 48px auto;
+    white-space: normal;
 }
 
 .dropdown {                            /* LISTAS DESPLEGABLES */
     position: relative;
     display: block;
-    margin-top: 8px;
+    margin-top: 0px;
 }
 
 .dropbtn {
@@ -507,7 +561,7 @@ input[type="submit"] {
     padding: 14px 12px;
     font-family: "Poppins", sans-serif;
     padding: 8px 8px;
-    border: 2px #2C191D solid;
+    border: 3px #2C191D solid;
     border-radius: 8px;    
     margin-top: 8px;
     color: gray;
@@ -517,12 +571,11 @@ input[type="submit"] {
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 230px;
-    box-shadow: 8px 8px 0px #2C191D;
+    width: 100%;
+    box-shadow: 4px 4px #2C191D;
     z-index: 10;
-    border: 2px solid #2C191D;
-    border-radius: 8px;
-    margin-top: 4px;
+    border: 3px solid #2C191D;
+    border-radius: 8px;    
     max-height: 200px;
     overflow-y: auto;
 }
@@ -559,8 +612,122 @@ footer {
 }
 
 
+@media (max-width: 1230px) {
+    header {
+        padding: 0 32px; /* Reducimos un poco el aire lateral */
+    }
+
+    .menu-icono {
+        display: block;
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    .menu-icono img {
+        height: 30px; /* Ajustá el tamaño de tu icono aquí */
+        width: auto;
+    }
+
+    header nav {
+        position: fixed;
+        top: 80px; /* Justo debajo del header */
+        left: 0;
+        width: 100%;
+        height: 0; /* Empieza cerrado */
+        background-color: #E4C599;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        border-bottom: 0px solid #2C191D;
+        z-index: 15;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Lista vertical */
+        padding: 40px 0;
+        gap: 30px;
+    }
+
+    header nav li {
+        margin-left: 0; /* Quitamos el margen lateral de desktop */
+    }
+
+    /* Cuando el checkbox está tildado, el nav se despliega */
+    #menu-check:checked ~ nav {
+        height: 400px; /* Ajustá según el largo de tu lista */
+        border-bottom: 4px solid #2C191D;
+    }
+
+    /* Ajuste del botón CTA dentro del menú mobile */
+    .boton-nav {
+        margin-top: 10px;
+        width: fit-content;
+    }
+}
+
+
 @media (max-width: 980px) {
-    .contenedorTarjetas {
+    /* --- PORTADA --- */
+    .Portada {
+        align-items: center;
+        text-align: center;
+        background-color: #E4C599;
+        background-image: linear-gradient(to top, #E4C599 0%, rgba(228, 197, 153, 0) 90%), url('./imagenes/portada.png');
+    }
+
+    .Portada h1 {
+        text-align: center;
+        margin-top: 64px;
+    }
+    /* --- FIN PORTADA --- */
+
+    /* --- SECCIÓN 1 --- */
+    .grillaSec1 {                        
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-lineup {
+        width: 90%;
+        max-width: 450px;
+    }
+
+    .texto {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .seccion-contador {           
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contador {                     
+        gap: 12px;       
+        padding: 12px;   
+    }
+
+    .caja {
+        width: 110px; 
+        aspect-ratio: 1 / 1;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .caja span {
+        font-size: 48px;
+    }
+
+    .bloque p {
+        font-size: 16px;
+        margin-top: 8px;
+    }                                  
+    /* --- FIN SECCIÓN 1 --- */
+      
+    /* --- SECCIÓN 4 --- */
+    .contenedorTarjetas {              
         grid-template-columns: 1fr;
         padding: 16px;
         gap: 24px;
@@ -569,26 +736,27 @@ footer {
     .tarjeta {
         height: auto;
         min-height: 400px;
+    }                                  
+    /* --- FIN SECCIÓN 4 --- */
+
+    /* --- SECCIÓN 5 --- */
+    .carta {
+        padding: 32px 16px;
     }
 
-    .contador {
-        gap: 8px;       
-        padding: 10px;
+    .carta h1 {
+        font-size: 42;
+    }
+    
+    .grillaForm {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 32px;
     }
 
-    .caja {
-        width: 70px;
-        height: 70px;
+    input[type="submit"] {
+        font-size: 20px;
     }
-
-    .caja span {
-        font-size: 1.8rem;
-    }
-
-    .bloque p {
-        font-size: 0.75rem;
-    }
-
-
+    /* --- FIN SECCIÓN 5 --- */
 }
 

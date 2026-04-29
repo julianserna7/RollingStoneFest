@@ -19,63 +19,62 @@
             <img src="./imagenes/logo-festival.png" alt="Logo Rolling Stone Fest">
         </a>
 
+        <input type="checkbox" id="menu-check">
+
+        <label for="menu-check" class="menu-icono">
+            <img src="./imagenes/icono-menu.png" alt="Abrir menú">
+        </label>
+
         <nav>
             <ul>
-                <li><a href="#festival">Sobre el festival</a></li>
-                <li><a href="#ubicacion">Ubicación</a></li>
-                <li><a href="#preguntas">Preguntas</a></li>
-                <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#registrate" class="botonregistrar">Registrate</a></li>
+                <li><a href="#festival" class="fuente-bold">Sobre el festival</a></li>
+                <li><a href="#ubicacion" class="fuente-bold">Ubicación</a></li>
+                <li><a href="#preguntas" class="fuente-bold">Preguntas</a></li>
+                <li><a href="#beneficios" class="fuente-bold">Beneficios</a></li>
+                <li><a href="#registrate" class="boton-nav">Registrate</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="inicio" class="Portada">
         <h1>Viví el <span class="resaltado">festival</span> que va a marcar el año</h1>
-        <p>Un evento único que reúne a los artistas más destacados del momento te espera este <span
-                class="resaltado">viernes 13 y sábado 14 de
-                noviembre</span>, con apertura de puertas a partir de las <span class="resaltado">14:00 hs</span>.
-            Enterate antes que nadie de la preventa
-            exclusiva y las actividades complementarias.</p>
-        <a href="#registrate" class="btn-registro">Registrate para recibir novedades</a>
+        <p class="resaltado3"> Un evento único que reúne a los artistas más destacados del momento te espera este <span
+                class="resaltado2">viernes 13 y sábado 14 de noviembre</span>, con apertura de puertas a partir de las
+            <span class="resaltado2">14:00 hs</span>. Enterate antes que nadie de la preventa exclusiva y las
+            actividades complementarias.</p>
+        <a href="#registrate" class="boton-portada">Registrate para recibir novedades</a>
     </section>
 
     <section class="seccion1" id="festival">
-        
+
         <h2>Sobre el festival</h2>
 
-        <div class="coso">
+        <div class="grillaSec1">
+            <div class="contenedor-lineup">
+                <img src="./imagenes/flyer-lineup.png" alt="lineup" class="lineup">
+            </div>
 
+            <div class="texto">
+                <h3>Acceso anticipado y contenido exclusivo</h3>
+                <p>Al registrarte vas a poder acceder a información exclusiva sobre la preventa y las actividades
+                    complementarias. Además, vas a recibir notificaciones anticipadas con contenido exclusivo de los
+                    artistas que participan en este evento.</p>
 
-            <img src="./imagenes/3.png" alt="lineup" class="lineup">
-            
+                <h3>Una experiencia musical única</h3>
+                <p>Este festival reúne a algunos de los artistas más relevantes de la escena musical actual en una
+                    experiencia pensada para descubrir, conectar y disfrutar en vivo. Durante varios días, artistas
+                    consagrados y emergentes comparten un mismo espacio.</p>
 
-         <div class="texto">
+                <h3>Formá parte de la comunidad</h3>
+                <p>Sumate a la comunidad y asegurate de no perderte ninguna novedad. Vas a ser de las primeras personas
+                    en
+                    enterarte de todo lo que estamos preparando.</p>
+            </div>
+        </div>
 
-        <h3>Acceso anticipado y contenido exclusivo</h3>
+        <section class="seccion-contador">
 
-        <p>Al registrarte vas a poder acceder a información exclusiva sobre la preventa y las actividades
-            complementarias. Además, vas a recibir notificaciones anticipadas con contenido exclusivo de los artistas
-            que participan en este evento.</p>
-
-        <h3>Una experiencia musical única</h3>
-
-        <p>Este festival reúne a algunos de los artistas más relevantes de la escena musical actual en una experiencia
-            pensada para descubrir, conectar y disfrutar en vivo. Durante varios días, artistas consagrados y emergentes
-            comparten un mismo espacio.</p>
-
-        <h3>Formá parte de la comunidad</h3>
-
-        <p>Sumate a la comunidad y asegurate de no perderte ninguna novedad. Vas a ser de las primeras personas en
-            enterarte de todo lo que estamos preparando.</p>
-
-           </div>
-        </div>  
-
-
-        <h2>Faltan...</h2>
-
-        <section class="contador-section">
+            <h2>Faltan...</h2>
 
             <div class="contador">
                 <div class="bloque">
@@ -128,7 +127,7 @@
     <section class="seccion3" id="preguntas">
         <h2>Preguntas frecuentes</h2>
         <h4>Resolvé tus dudas antes de registrarte</h4>
-        <section class="grilla">
+        <section class="grillaFAQ">
             <div class="fila">
                 <p class="pregunta">¿Desde qué edad se puede ingresar al festival?</p>
                 <p class="respuesta">El ingreso está habilitado a partir de los 16 años, presentando DNI.</p>
@@ -197,16 +196,16 @@
             <h4>Registrate y enterate antes que nadie de todas las novedades.</h4>
 
             <form action="#">
-                <div class="grid">
+                <div class="grillaForm">
 
                     <div class="campo">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escribí tu nombre">
                     </div>
 
                     <div class="campo">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Escribe tu email">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Escribí tu email">
                     </div>
 
                     <div class="campo">
