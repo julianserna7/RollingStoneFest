@@ -176,7 +176,6 @@ header nav a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    /* 2. El degradado va DE COLOR SOLIDO a TRANSPARENTE, y luego la foto */
         background-image: 
             linear-gradient(to top, #E4C599 0%, rgba(228, 197, 153, 0) 50%),
             url('./imagenes/portada.png');
@@ -360,33 +359,26 @@ header nav a {
 .seccion3 {
     background-color: #E4C599;
     margin: 0;
-    padding: 64;
+    padding: 64px;
     border-bottom: solid #2C191D 4px;
     color: #2C191D;
 }
 
-.grillaFAQ {                              /* GRILLAS PREGUNTAS FRECUENTES */
+.grillaFAQ {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, auto);
     max-width: 1140px;
     border: solid #2C191D 4px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 8px 8px #2C191D;
     margin: 0 auto;
-}
-
-.grillaFAQ p {
-    padding: 16px;
-    margin: 0;  
-    text-align: left;
-    padding: 24px 32px;
+    background-color: #E4C599; /* Fondo base para evitar saltos de color */
 }
 
 .fila {
     border-bottom: solid #2C191D 4px;
-    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .fila:last-child {
@@ -396,26 +388,44 @@ header nav a {
 .pregunta {  
     text-align: left;
     font-weight: bold;
+    padding: 24px 32px;
+    margin: 0;
+    cursor: pointer; /* Cursor pointer como pediste */
+    transition: all;
+}
+
+/* Hover y Estado Abierto de la pregunta */
+.pregunta:hover, .fila.abierta .pregunta {
+    background-color: #2C191D;
+    color: #E4C599;
+}
+
+/* Lógica de Animación para la respuesta */
+.respuesta-container {
+    display: grid;
+    grid-template-rows: 0fr; /* Altura colapsada */
+    transition: grid-template-rows 0.4s ease; /* Esta es la magia de la animación */
+    overflow: hidden;
+}
+
+.fila.abierta .respuesta-container {
+    grid-template-rows: 1fr; /* Altura expandida */
 }
 
 .respuesta {
-    display: none;
+    min-height: 0;
+    padding: 0 32px; /* Padding lateral */
+    margin: 0;
     text-align: left;
     color: #2C191D;
-}
-
-.respuesta-margin {
-    margin: 64px;
+    /* El padding inferior de 48px se aplica solo cuando está abierta */
+    transition: padding 0.4s ease;
 }
 
 .fila.abierta .respuesta {
-    display: block;
-}
-
-.fila.abierta .pregunta {
-    background-color: #2C191D;
-    color: #E4C599;
-}                                      /* FIN DE GRILLA */
+    padding-bottom: 48px;
+    padding-top: 16px; /* Un pequeño ajuste para que no pegue a la pregunta */
+} /* FIN DE GRILLA */
 
 /* --- FIN SECCIÓN 3 --- */
 
@@ -612,11 +622,7 @@ footer {
 }
 
 
-@media (max-width: 1230px) {
-    header {
-        padding: 0 32px; /* Reducimos un poco el aire lateral */
-    }
-
+@media (max-width: 1230px) {   
     .menu-icono {
         display: block;
         cursor: pointer;
@@ -624,16 +630,16 @@ footer {
     }
 
     .menu-icono img {
-        height: 30px; /* Ajustá el tamaño de tu icono aquí */
+        height: 30px;
         width: auto;
     }
 
     header nav {
         position: fixed;
-        top: 80px; /* Justo debajo del header */
+        top: 80px;
         left: 0;
         width: 100%;
-        height: 0; /* Empieza cerrado */
+        height: 0;
         background-color: #E4C599;
         overflow: hidden;
         transition: all 0.3s ease-in-out;
@@ -642,7 +648,7 @@ footer {
     }
 
     header nav ul {
-        flex-direction: column; /* Lista vertical */
+        flex-direction: column;
         padding: 40px 0;
         gap: 30px;
     }
@@ -653,7 +659,7 @@ footer {
 
     /* Cuando el checkbox está tildado, el nav se despliega */
     #menu-check:checked ~ nav {
-        height: 400px; /* Ajustá según el largo de tu lista */
+        height: 350px; /* Ajustá según el largo de tu lista */
         border-bottom: 4px solid #2C191D;
     }
 
@@ -699,9 +705,7 @@ footer {
     .seccion-contador {           
         padding: 20px 0;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        max-width: 425px;   
     }
     
     .contador {                     

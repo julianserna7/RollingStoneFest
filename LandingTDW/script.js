@@ -2,8 +2,20 @@
 const filas = document.querySelectorAll('.fila');
 
 filas.forEach(fila => {
+    // Escuchamos el click en la fila
     fila.addEventListener('click', () => {
-        fila.classList.toggle('abierta');
+        
+        // Verificamos si la fila clickeada ya está abierta
+        const estaAbierta = fila.classList.contains('abierta');
+
+        // 1. Cerramos TODAS las filas primero (esta es la clave para que solo haya una abierta)
+        filas.forEach(f => f.classList.remove('abierta'));
+
+        // 2. Si la fila que clickeamos NO estaba abierta, la abrimos
+        // (Si ya estaba abierta, se queda cerrada por el paso anterior)
+        if (!estaAbierta) {
+            fila.classList.add('abierta');
+        }
     });
 });
 
