@@ -24,8 +24,9 @@ header {
 }
 
 
-/* --- TIPOGRAFÍAS --- */
-
+/* =========== 
+   TIPOGRAFÍAS 
+   =========== */
 h1 {
     font-family: "Fraunces", serif;
     font-optical-sizing: auto;
@@ -94,11 +95,10 @@ ul {
     font-weight: bold;
 }
 
-/* --- FIN TIPOGRAFÍAS --- */
 
-
-/* --- NAV Y UL --- */
-
+/* ========= 
+    NAV Y UL 
+   ========= */
 header nav ul {
     display: flex;
     align-items: center;
@@ -157,11 +157,10 @@ header nav a {
     display: none;
 }
 
-/* --- FIN NAV Y UL --- */
 
-
-/* --- PORTADA --- */
-
+/* ========= 
+    PORTADA 
+   ========= */
 .Portada {
     background-image: url('./imagenes/portada.png');
     background-size: cover;
@@ -180,7 +179,6 @@ header nav a {
             linear-gradient(to top, #E4C599 0%, rgba(228, 197, 153, 0) 50%),
             url('./imagenes/portada.png');
 }
-
 
 .Portada h1 {
     max-width: 650px; 
@@ -215,11 +213,10 @@ header nav a {
     box-shadow: 2px 2px #2C191D;
 }
 
-/* --- FIN PORTADA --- */
 
-
-/* --- SECCIÓN 1 --- */
-
+/* ============================= 
+   SECCIÓN 1 - SOBRE EL FESTIVAL 
+   ============================= */
 .seccion1 {
     background-color: #6E602F;
     padding: 64px 64px;
@@ -323,11 +320,10 @@ header nav a {
     color: #E4C599;
 }                                      /* FIN CONTADOR */
 
-/* --- FIN SECCIÓN 1 --- */
 
-
-/* --- SECCIÓN 2 --- */
-
+/* =====================
+   SECCIÓN 2 - UBICACIÓN 
+   ===================== */
 .seccion2 {
     background-color: #E4C599;
     margin: 0;
@@ -348,14 +344,12 @@ header nav a {
     border: solid #2C191D 4px;
     border-radius: 8px;
     box-shadow: 8px 8px 0px #2C191D;
-
 }
 
-/* --- FIN SECCIÓN 2 --- */
 
-
-/* --- SECCIÓN 3 --- */
-
+/* ================================
+   SECCIÓN 3 - PREGUNTAS FRECUENTES 
+   ================================ */
 .seccion3 {
     background-color: #E4C599;
     margin: 0;
@@ -364,7 +358,7 @@ header nav a {
     color: #2C191D;
 }
 
-.grillaFAQ {
+.grillaFAQ {                           /* GRILLA */
     display: grid;
     grid-template-columns: 1fr;
     max-width: 1140px;
@@ -373,7 +367,7 @@ header nav a {
     overflow: hidden;
     box-shadow: 8px 8px #2C191D;
     margin: 0 auto;
-    background-color: #E4C599; /* Fondo base para evitar saltos de color */
+    background-color: #E4C599;
 }
 
 .fila {
@@ -390,7 +384,7 @@ header nav a {
     font-weight: bold;
     padding: 24px 32px;
     margin: 0;
-    cursor: pointer; /* Cursor pointer como pediste */
+    cursor: pointer;
     transition: all;
 }
 
@@ -404,7 +398,7 @@ header nav a {
 .respuesta-container {
     display: grid;
     grid-template-rows: 0fr; /* Altura colapsada */
-    transition: grid-template-rows 0.4s ease; /* Esta es la magia de la animación */
+    transition: grid-template-rows 0.4s ease;
     overflow: hidden;
 }
 
@@ -418,20 +412,18 @@ header nav a {
     margin: 0;
     text-align: left;
     color: #2C191D;
-    /* El padding inferior de 48px se aplica solo cuando está abierta */
     transition: padding 0.4s ease;
 }
 
 .fila.abierta .respuesta {
     padding-bottom: 48px;
-    padding-top: 16px; /* Un pequeño ajuste para que no pegue a la pregunta */
-} /* FIN DE GRILLA */
-
-/* --- FIN SECCIÓN 3 --- */
+    padding-top: 16px;
+}                                      /* FIN DE GRILLA */
 
 
-/* --- SECCIÓN 4 --- */
-
+/* =====================================
+   SECCIÓN 4 - BENEFICIOS DE REGISTRARTE 
+   ===================================== */
 .seccion4 {
     background-color: #F69A45;
     margin: 0;
@@ -477,41 +469,22 @@ header nav a {
     border-radius: 8px;
 }                                      /* FIN DE TARJETAS */
 
-/* --- FIN SECCIÓN 4 --- */
 
-
-/* --- SECCIÓN 5 --- */
-
+/* ======================
+   SECCIÓN 5 - FORMULARIO
+   ====================== */
 .formulario {
     background-color: #2C191D;
     border-bottom: solid #D15231 4px;
-    padding: 64px;
+    padding: 80px 64px;
     margin: 0;
     color: #E4C599;
-}
-
-.grillaForm {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    text-align: left;
-}
-
-.campo {
-    display: flex;
-    flex-direction: column;
-}
-
-.campo label {
-    font-weight: 600;
-    font-size: 1.2rem;
-    font-family: "Poppins", sans-serif;
 }
 
 .carta {
     background-color: #E4C599;
     border: 4px #2C191D solid;
-    padding: 24px 48px;
+    padding: 48px;
     color: #2C191D;
     box-shadow: 8px 8px #E4C599;
     border-radius: 8px;
@@ -520,62 +493,113 @@ header nav a {
     text-align: center;
 }
 
-.carta h1 {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 24px;
+.carta h1 { text-align: center; margin-top: 0; margin-bottom: 12px; }
+.carta h4 { margin-bottom: 36px; }
+
+.grillaForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    text-align: left;
 }
 
-input[type="text"], input[type="email"] {
-    padding: 8px 8px;
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.campo label {
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 4px;
+}
+
+.campo-error {
+    color: #D15231;
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    min-height: 18px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 10px 12px;
     border: 3px #2C191D solid;
     border-radius: 8px;
     color: #2C191D;
-    margin-top: 8px;
-    box-sizing: border-box; 
     font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    background: #fff;
 }
 
-input[type="submit"] {
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #D15231;
+    box-shadow: 0 0 0 3px rgba(209,82,49,0.18);
+}
+
+input[type="text"].invalido,
+input[type="email"].invalido {
+    border-color: #D15231;
+    background-color: #fff5f5;
+}
+
+.boton-submit {
     background-color: #D15231;
     border: 3px #2C191D solid;
     border-radius: 8px;
     box-shadow: 4px 4px #2C191D;
     font-family: "Poppins", sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 800;
     color: #E4C599;
     text-align: center;
-    padding: 16px 16px;
+    padding: 16px 24px;
     cursor: pointer;
     display: block;
     width: 100%;
-    max-width: 510px;
-    margin: 48px auto;
+    max-width: 520px;
+    margin: 40px auto 8px;
     white-space: normal;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s;
 }
 
-.dropdown {                            /* LISTAS DESPLEGABLES */
+.boton-submit:hover {
+    background-color: #b8431f;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px #2C191D;
+}
+
+.boton-submit:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px #2C191D;
+}
+
+.dropdown {                            /* DROPDOWNS */
     position: relative;
     display: block;
-    margin-top: 0px;
 }
 
 .dropbtn {
     background-color: white;
     cursor: pointer;
     text-align: left;
-    font-size: 14px;
+    font-size: 15px;
     width: 100%;
-    box-sizing: border-box; 
-    padding: 14px 12px;
+    padding: 10px 12px;
     font-family: "Poppins", sans-serif;
-    padding: 8px 8px;
     border: 3px #2C191D solid;
-    border-radius: 8px;    
-    margin-top: 8px;
-    color: gray;
+    border-radius: 8px;
+    color: #666;
+    transition: border-color 0.2s;
 }
+
+.dropbtn:focus { border-color: #D15231; outline: none; }
 
 .dropdown-content {
     display: none;
@@ -585,44 +609,170 @@ input[type="submit"] {
     box-shadow: 4px 4px #2C191D;
     z-index: 10;
     border: 3px solid #2C191D;
-    border-radius: 8px;    
+    border-radius: 8px;
     max-height: 200px;
     overflow-y: auto;
+    animation: dropdown-appear 0.2s ease;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+@keyframes dropdown-appear {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
+
+.dropdown-content.open { display: block; }
 
 .dropdown-content label {
     color: #2C191D;
-    padding: 10px 12px;
+    padding: 10px 14px;
     display: flex;
     align-items: center;
     cursor: pointer;
     font-family: "Poppins", sans-serif;
     font-size: 14px;
+    transition: background-color 0.15s;
 }
 
-.dropdown-content label:hover {
-    background-color: #F69A45;
+.dropdown-content label:hover { background-color: #F69A45; }
+.dropdown-content input { margin-right: 10px; }
+
+.popup-overlay {                       /* POPUP CONFIRMACIÓN */
+    position: fixed;
+    inset: 0;
+    background: rgba(44,25,29,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    backdrop-filter: blur(4px);
 }
 
-.dropdown-content input {
-    margin-right: 10px;
-}                                      /* FIN LISTAS DESPLEGABLES */
+.popup-overlay.activo {
+    opacity: 1;
+    pointer-events: all;
+}
 
-/* --- FIN SECCIÓN 5 --- */
+.popup-confirmacion-contenido {
+    background-color: #E4C599;
+    border: 4px solid #2C191D;
+    border-radius: 12px;
+    box-shadow: 10px 10px #2C191D;
+    padding: 48px 40px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    transform: scale(0.85) translateY(20px);
+    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+}
 
+.popup-overlay.activo .popup-confirmacion-contenido {
+    transform: scale(1) translateY(0);
+}
 
+.popup-icono {
+    font-size: 56px;
+    margin-bottom: 16px;
+    animation: rock-icon 0.6s ease 0.3s both;
+}
+
+@keyframes rock-icon {
+    0%   { transform: rotate(-20deg) scale(0.5); opacity: 0; }
+    60%  { transform: rotate(10deg) scale(1.2); opacity: 1; }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+.popup-confirmacion-contenido h2 {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    color: #2C191D;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.popup-confirmacion-contenido p {
+    color: #2C191D;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.popup-sub {
+    color: #6E602F !important;
+    font-size: 14px !important;
+    margin-bottom: 32px !important;
+}
+
+.boton-popup-ok {
+    background-color: #D15231;
+    color: #E4C599;
+    border: 3px solid #2C191D;
+    border-radius: 8px;
+    box-shadow: 4px 4px #2C191D;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s, background-color 0.2s;
+}
+
+.boton-popup-ok:hover {
+    background-color: #b8431f;
+    transform: translate(-2px,-2px);
+    box-shadow: 6px 6px #2C191D;
+}
+
+.boton-popup-ok:active {
+    transform: translate(2px,2px);
+    box-shadow: 2px 2px #2C191D;
+}
+
+.popup-cerrar {                        /* BOTÓN CERRAR */
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 40px;
+    height: 40px;
+    background-color: #D15231;
+    color: #E4C599;
+    border: 3px solid #2C191D;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background-color 0.2s, transform 0.15s;
+    z-index: 2;
+}
+
+.popup-cerrar:hover {
+    background-color: #b8431f;
+    transform: scale(1.1);
+}
+
+/* ========= 
+     FOOTER 
+   ========= */
 footer {
     padding: 32px 64px;
     text-align: center;
     color: #E4C599;
 }
 
-
-@media (max-width: 1230px) {   
+/* ================= 
+   RESPONSIVE - 1230px 
+   ================= */
+@media (max-width: 1230px) {
+    /* ========= 
+        NAV Y UL 
+       ========= */  
     .menu-icono {
         display: block;
         cursor: pointer;
@@ -657,22 +807,25 @@ footer {
         margin-left: 0; /* Quitamos el margen lateral de desktop */
     }
 
-    /* Cuando el checkbox está tildado, el nav se despliega */
-    #menu-check:checked ~ nav {
+    #menu-check:checked ~ nav { /* Cuando el checkbox está tildado, el nav se despliega */
         height: 350px; /* Ajustá según el largo de tu lista */
         border-bottom: 4px solid #2C191D;
     }
 
-    /* Ajuste del botón CTA dentro del menú mobile */
-    .boton-nav {
+    .boton-nav { /* Ajuste del botón CTA dentro del menú mobile */
         margin-top: 10px;
         width: fit-content;
     }
 }
 
 
+/* ================ 
+   RESPONSIVE - 980px 
+   ================ */
 @media (max-width: 980px) {
-    /* --- PORTADA --- */
+    /* ========= 
+        PORTADA 
+       ========= */
     .Portada {
         align-items: center;
         text-align: center;
@@ -684,9 +837,10 @@ footer {
         text-align: center;
         margin-top: 64px;
     }
-    /* --- FIN PORTADA --- */
 
-    /* --- SECCIÓN 1 --- */
+    /* =============================
+       SECCIÓN 1 - SOBRE EL FESTIVAL
+       ============================= */
     .grillaSec1 {                        
         flex-direction: column;
         align-items: center;
@@ -728,9 +882,10 @@ footer {
         font-size: 16px;
         margin-top: 8px;
     }                                  
-    /* --- FIN SECCIÓN 1 --- */
       
-    /* --- SECCIÓN 4 --- */
+    /* =====================================
+       SECCIÓN 4 - BENEFICIOS DE REGISTRARTE
+       ===================================== */
     .contenedorTarjetas {              
         grid-template-columns: 1fr;
         padding: 16px;
@@ -741,9 +896,10 @@ footer {
         height: auto;
         min-height: 400px;
     }                                  
-    /* --- FIN SECCIÓN 4 --- */
 
-    /* --- SECCIÓN 5 --- */
+    /* ====================== 
+       SECCIÓN 5 - FORMULARIO 
+       ====================== */
     .carta {
         padding: 32px 16px;
     }
@@ -761,6 +917,5 @@ footer {
     input[type="submit"] {
         font-size: 20px;
     }
-    /* --- FIN SECCIÓN 5 --- */
 }
 

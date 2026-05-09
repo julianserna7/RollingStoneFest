@@ -204,29 +204,30 @@
         </div>
     </section>
 
+    <!-- SECCIÓN 5: FORMULARIO -->
     <section class="formulario" id="registrate">
-        <div class="carta">
+        <div class="carta reveal-fade-up">
             <h1>Recibí <span class="resaltado">novedades</span> del festival</h1>
             <h4>Registrate y enterate antes que nadie de todas las novedades.</h4>
 
-            <form action="#">
+            <form id="form-registro" action="#" novalidate>
                 <div class="grillaForm">
-
                     <div class="campo">
                         <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Escribí tu nombre">
+                        <input type="text" name="nombre" id="nombre" placeholder="Escribí tu nombre"
+                            autocomplete="given-name">
+                        <span class="campo-error" id="error-nombre"></span>
                     </div>
-
                     <div class="campo">
                         <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" placeholder="Escribí tu email">
+                        <input type="email" name="email" id="email" placeholder="Escribí tu email" autocomplete="email">
+                        <span class="campo-error" id="error-email"></span>
                     </div>
-
                     <div class="campo">
                         <label>Género musical preferido:</label>
                         <div class="dropdown">
                             <button type="button" class="dropbtn" id="btn-genero">Seleccionar géneros ▼</button>
-                            <div class="dropdown-content">
+                            <div class="dropdown-content" id="dropdown-genero">
                                 <label><input type="checkbox" name="genero" value="nacional"> Rock nacional</label>
                                 <label><input type="checkbox" name="genero" value="rock"> Rock clásico</label>
                                 <label><input type="checkbox" name="genero" value="pop"> Pop</label>
@@ -236,13 +237,13 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="campo">
                         <label>¿Cómo te enteraste del evento?:</label>
                         <div class="dropdown">
                             <button type="button" class="dropbtn" id="btn-fuente">Seleccionar opción ▼</button>
-                            <div class="dropdown-content">
-                                <label><input type="radio" name="fuente" value="rrss"> Anuncios en redes sociales</label>
+                            <div class="dropdown-content" id="dropdown-fuente">
+                                <label><input type="radio" name="fuente" value="rrss"> Anuncios en redes
+                                    sociales</label>
                                 <label><input type="radio" name="fuente" value="newsletter"> Mails / Newsletters</label>
                                 <label><input type="radio" name="fuente" value="recomendacion"> Recomendación</label>
                                 <label><input type="radio" name="fuente" value="noticias"> Páginas de noticias</label>
@@ -250,11 +251,21 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-                <input type="submit" value="QUIERO RECIBIR MÁS NOVEDADES">
+                <button type="submit" class="boton-submit">QUIERO RECIBIR MÁS NOVEDADES</button>
             </form>
+        </div>
+        <!-- ===== POP-UP: CONFIRMACIÓN REGISTRO ===== -->
+        <div class="popup-overlay" id="popup-confirmacion" role="dialog" aria-modal="true"
+            aria-label="Registro confirmado">
+            <div class="popup-contenido popup-confirmacion-contenido">
+                <div class="popup-icono">🎸</div>
+                <h2>¡Ya estás dentro!</h2>
+                <p>Te registraste con éxito. Vas a ser de las primeras personas en recibir novedades del <strong>Rolling
+                        Stone Fest 2026</strong>.</p>
+                <p class="popup-sub">Revisá tu casilla de correo en los próximos días.</p>
+                <button class="boton-popup-ok" id="cerrar-confirmacion">¡Perfecto!</button>
+            </div>
         </div>
     </section>
 
