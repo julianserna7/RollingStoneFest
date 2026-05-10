@@ -371,7 +371,11 @@ header nav a:not(.boton-nav):hover {
     padding: 64px 64px;
     border-bottom: solid #2C191D 4px;
     color: #E4C599;
+    position: relative;
+    
 }
+
+
 
 .grillaSec1 {
     display: flex;
@@ -392,6 +396,9 @@ header nav a:not(.boton-nav):hover {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+    z-index: 2;
 }
 
 .lineup {
@@ -400,6 +407,14 @@ header nav a:not(.boton-nav):hover {
     border: 4px solid #2C191D;
     border-radius: 8px;
     display: block;
+}
+
+.deco3 {
+    position: absolute;
+    width: 280px; 
+    pointer-events: none; 
+    z-index: 1;
+    
 }
 
 .texto {
@@ -420,6 +435,23 @@ header nav a:not(.boton-nav):hover {
 .seccion-contador {                /* COMIENZO CONTADOR */    
     padding: 64px;
     text-align: center;
+    position: relative;
+}
+
+.deco4 {
+    position: absolute;
+    width: 380px; 
+    pointer-events: none; 
+    z-index: 0;
+    
+}
+
+.deco5 {
+    position: absolute;
+    width: 300px; 
+    pointer-events: none; 
+    z-index: 0;
+    transform: rotate(30deg);
 }
 
 .contador {                            
@@ -434,6 +466,9 @@ header nav a:not(.boton-nav):hover {
     border-radius: 8px;
     box-shadow: 8px 8px 0px #2C191D;
     padding: 16px;
+
+    position: relative;
+    z-index: 2;
 }
 
 .caja {                                
@@ -480,7 +515,19 @@ header nav a:not(.boton-nav):hover {
     min-height: 50vh;
     border-bottom: solid #2C191D 4px;
     color: #2C191D;
+    overflow: hidden;
+    position: relative;
 }
+
+.deco6 {
+    position: absolute;
+    width: 380px; 
+    pointer-events: none; 
+    z-index: 0;
+    
+}
+
+
 
 .mapa {
     display: flex;
@@ -493,6 +540,30 @@ header nav a:not(.boton-nav):hover {
     border: solid #2C191D 4px;
     border-radius: 8px;
     box-shadow: 8px 8px 0px #2C191D;
+
+    position: relative;
+    z-index: 2;
+}
+
+.mapa-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.deco7 {
+    position: absolute;
+    width: 220px; 
+    pointer-events: none; 
+    z-index: 0;
+    
+}
+
+.deco8 {
+    position: absolute;
+    width: 330px; 
+    pointer-events: none; 
+    z-index: 0;
+    
 }
 
 
@@ -505,7 +576,37 @@ header nav a:not(.boton-nav):hover {
     padding: 64px;
     border-bottom: solid #2C191D 4px;
     color: #2C191D;
+
+    position: relative;
+    overflow: hidden;
 }
+
+.deco9 {
+    position: absolute;
+    width: 330px; 
+    pointer-events: none; 
+    z-index: 0;
+    transform: rotate(13deg);
+    
+}
+
+.deco10 {
+    position: absolute;
+    width: 330px; 
+    pointer-events: none; 
+    z-index: 0;
+    transform: rotate(3deg);
+    
+}
+
+.deco11 {
+    position: absolute;
+    width: 330px; 
+    pointer-events: none; 
+    z-index: 0;
+    
+}
+
 
 .grillaFAQ {                           /* GRILLA */
     display: grid;
@@ -517,6 +618,9 @@ header nav a:not(.boton-nav):hover {
     box-shadow: 8px 8px #2C191D;
     margin: 0 auto;
     background-color: #E4C599; 
+
+    position: relative;
+    z-index: 2;
 }
 
 .fila {
@@ -677,6 +781,43 @@ header nav a:not(.boton-nav):hover {
     padding: 80px 64px;
     margin: 0;
     color: #E4C599;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.deco12 {
+    position: absolute;
+    width: 330px; 
+    pointer-events: none; 
+    z-index: 0;
+    
+}
+
+.deco13 {
+    position: absolute;
+    width: 330px; 
+    pointer-events: none; 
+    z-index: 0;
+    
+}
+
+.deco14 {
+    position: absolute;
+    width: 125px; 
+    pointer-events: none; 
+    z-index: 0;
+    transform: rotate(30deg);
+    
+}
+
+.deco15 {
+    position: absolute;
+    width: 395px; 
+    pointer-events: none; 
+    z-index: 0;
+
+    
 }
 
 .carta {
@@ -689,6 +830,9 @@ header nav a:not(.boton-nav):hover {
     max-width: 990px;
     margin: 0 auto;
     text-align: center;
+
+    position: relative;
+    z-index: 2;
 }
 
 .carta h1 { text-align: center; margin-top: 0; margin-bottom: 12px; }
