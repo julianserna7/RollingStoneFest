@@ -311,13 +311,21 @@ header nav a:not(.boton-nav):hover {
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 4px 4px #2C191D; 
-    transition: transform 0.1s;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s;
+}
+
+.boton-portada:hover {
+    background-color: #D15231;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px #2C191D;
 }
 
 .boton-portada:active {
     transform: translateY(2px);
     box-shadow: 2px 2px #2C191D;
 }
+
+
 
 
 /* ============================= 
