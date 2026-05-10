@@ -5,29 +5,7 @@ html {
 
 body {
     margin: 0px;
-}
-
-header {
-    background-color: #E4C599;
-    height: 80px;
-    padding: 0 64px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 4px solid #2C191D;
-    color: #2C191D;
-    position: fixed; 
-    top: 0;          
-    left: 0;         
-    width: 100%; 
-    box-sizing: border-box;
-
-    z-index: 100;
-    transition: box-shadow 0.3s ease;
-}
-
-header.scrolled {
-    box-shadow: 0 4px 20px rgba(44,25,29,0.18);
+    overflow-x: hidden;
 }
 
 
@@ -41,9 +19,10 @@ h1 {
     font-weight: 900;
     font-size: 64px;
     text-align: left;
-    letter-spacing: 4%;
+    letter-spacing: 0.04em;
     margin-top: 0;
     margin-bottom: 32px;
+    line-height: 1.1;
 }
 
 h2 {
@@ -53,7 +32,7 @@ h2 {
     font-weight: 900;
     font-size: 48px;
     text-align: center;
-    letter-spacing: 4%;
+    letter-spacing: 0.04em;
     margin-top: 0;
     margin-bottom: 32px;
 }
@@ -103,10 +82,10 @@ ul {
 }
 
 
-/* ANIMACION DE APARICION*/
-.reveal-fade-up,
-.reveal-slide-left,
-.reveal-slide-right {
+/* ===================
+   ANIMACION APARICIÓN
+   =================== */
+.reveal-fade-up, .reveal-slide-left, .reveal-slide-right {
     opacity: 0;
     transition: opacity 0.7s ease, transform 0.7s ease;
     transition-delay: var(--delay, 0ms);
@@ -116,19 +95,37 @@ ul {
 .reveal-slide-left { transform: translateX(-50px); }
 .reveal-slide-right{ transform: translateX(50px); }
 
-.reveal-fade-up.visible,
-.reveal-slide-left.visible,
-.reveal-slide-right.visible {
+.reveal-fade-up.visible, .reveal-slide-left.visible, .reveal-slide-right.visible {
     opacity: 1;
     transform: translate(0, 0);
 }
 
-/* FIN DE ANIMACION APARICION */
 
+/* ============
+   HEADER Y NAV 
+   ============ */
+header {
+    background-color: #E4C599;
+    height: 80px;
+    padding: 0 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #2C191D;
+    color: #2C191D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
 
-/* ========= 
-    NAV Y UL 
-   ========= */
+header.scrolled {
+    box-shadow: 0 4px 20px rgba(44,25,29,0.18);
+}
+
 header nav ul {
     display: flex;
     align-items: center;
@@ -146,14 +143,11 @@ header nav a {
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
-
     position: relative;
-
     transition: 0.2s;
 }
 
 /* AGREGADO */
-
 header nav a:not(.boton-nav)::after {
     content: '';
     position: absolute;
@@ -172,9 +166,6 @@ header nav a:not(.boton-nav):hover::after {
 header nav a:not(.boton-nav):hover { 
     color: #D15231; 
 }
-
-
-
 /* FIN DE AGREGADO */
 
 .boton-nav {
@@ -186,12 +177,11 @@ header nav a:not(.boton-nav):hover {
     font-weight: bold;
     padding: 10px 20px;
     display: inline-block;
-
-    display: inline-block;
     transition: box-shadow 0.15s ease, transform 0.15s ease, background-color 0.2s;
 }
 
-.boton-nav:hover { /* AGREGADO */
+/* AGREGADO */
+.boton-nav:hover { 
     background-color: #D15231;
     box-shadow: 6px 6px 0px #2C191D;
     transform: translate(-1px, -1px);
@@ -202,7 +192,8 @@ header nav a:not(.boton-nav):hover {
     transform: translate(2px, 2px);
 }
 
-.logo-fest {                           /* AJUSTES LOGO */
+/* AJUSTES LOGO */
+.logo-fest {                           
     display: flex;
     align-items: center;
     height: 100%;
@@ -225,7 +216,9 @@ header nav a:not(.boton-nav):hover {
 }
 
 /* Menu (tincho) */
-
+#menu-check { 
+    display: none; 
+}
 
 .menu-icono {
     display: none;
@@ -256,12 +249,7 @@ header nav a:not(.boton-nav):hover {
 #menu-check:checked ~ .menu-icono .hamburger-line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
-
 /* FIN menu (tincho)*/
-
-
-
-
 
 
 /* ========= 
@@ -481,7 +469,6 @@ header nav a:not(.boton-nav):hover {
     overflow: hidden;
     box-shadow: 8px 8px #2C191D;
     margin: 0 auto;
-
     background-color: #E4C599; 
 }
 
@@ -500,36 +487,27 @@ header nav a:not(.boton-nav):hover {
     align-items: center;
     justify-content: space-between;
     padding: 20px 32px;
-    gap: 16px;
+    
 }
 
 .pregunta {  
     text-align: left;
     font-weight: bold;
-    /*padding: 24px 32px;
-    padding: 16px;*/
-    padding: 10px;
+    padding: 10px 0px;
     margin: 0;
-
     cursor: pointer; 
-    /*transition: all;*/
     transition: max-height 0.4s ease, padding 0.3s ease;
-
 }
-
 
 .fila:hover .pregunta-header {
     background-color: #2C191D;
     color: #E4C599;
 }
 
-
 .respuesta-container {
     display: grid;
-
     grid-template-rows: 0fr; 
     transition: grid-template-rows 0.4s ease; 
-
     overflow: hidden;
 }
 
@@ -551,30 +529,32 @@ header nav a:not(.boton-nav):hover {
     padding-bottom: 48px;
 
     padding-top: 16px; 
-} /* FIN DE GRILLA */
+} 
+/* FIN DE GRILLA */
 
 /* ICON */
-
 .faq-icon {
     font-size: 24px;
     font-weight: 700;
-    color: #D15231;
+    color: #2C191D;
     flex-shrink: 0;
     transition: transform 0.3s ease;
     line-height: 1;
 }
 
+.fila:hover .faq-icon {
+    color: #E4C599;
+}
+
 .fila.abierta .faq-icon {
     transform: rotate(45deg);
-    color: #D15231;
+    color: #E4C599;
 }
 
 .fila.abierta .pregunta-header {
     background-color: #2C191D;
     color: #E4C599;
 }
-
-
 /* --- FIN SECCIÓN 3 --- */
 
 
@@ -591,7 +571,8 @@ header nav a:not(.boton-nav):hover {
     color: #2C191D;
 }
 
-.contenedorTarjetas {                  /* TARJETAS */
+/* TARJETAS */
+.contenedorTarjetas {                  
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 48px;
@@ -636,7 +617,8 @@ header nav a:not(.boton-nav):hover {
 .tarjeta img {
     border: solid #2C191D 4px;
     border-radius: 8px;
-}                                      /* FIN DE TARJETAS */
+}                                      
+/* FIN DE TARJETAS */
 
 
 /* ======================
@@ -749,7 +731,8 @@ input[type="email"].invalido {
     box-shadow: 2px 2px #2C191D;
 }
 
-.dropdown {                            /* DROPDOWNS */
+/* DROPDOWNS */
+.dropdown {                            
     position: relative;
     display: block;
 }
@@ -805,7 +788,8 @@ input[type="email"].invalido {
 .dropdown-content label:hover { background-color: #F69A45; }
 .dropdown-content input { margin-right: 10px; }
 
-.popup-overlay {                       /* POPUP CONFIRMACIÓN */
+/* POPUP CONFIRMACIÓN */
+.popup-overlay {                       
     position: fixed;
     inset: 0;
     background: rgba(44,25,29,0.75);
@@ -900,7 +884,8 @@ input[type="email"].invalido {
     box-shadow: 2px 2px #2C191D;
 }
 
-.popup-cerrar {                        /* BOTÓN CERRAR */
+/* BOTÓN CERRAR */
+.popup-cerrar {                        
     position: absolute;
     top: -18px;
     right: -18px;
@@ -935,9 +920,9 @@ footer {
     color: #E4C599;
 }
 
-/* ================= 
+/* =================== 
    RESPONSIVE - 1230px 
-   ================= */
+   =================== */
 @media (max-width: 1230px) {
     /* ========= 
         NAV Y UL 
@@ -1018,7 +1003,7 @@ footer {
     /* =============================
        SECCIÓN 1 - SOBRE EL FESTIVAL
        ============================= */
-     .seccion1  { padding: 60px 32px; }
+    .seccion1  { padding: 60px 32px; }
 
     .grillaSec1 {                        
         flex-direction: column;
@@ -1038,9 +1023,14 @@ footer {
     }
 
     .seccion-contador {           
-        padding: 20px 0;
         width: 100%;
-        max-width: 425px;   
+        max-width: 100%; 
+        display: flex;
+        flex-direction: column; /* ¡ESTO ES CLAVE! Pone el título arriba y el contador abajo */
+        align-items: center;    /* Centra todo horizontalmente */
+        justify-content: center;
+        padding: 40px 20px;
+        box-sizing: border-box; 
     }
     
     .contador {                     
@@ -1061,23 +1051,28 @@ footer {
 
     .bloque p {
         font-size: 14px;
-      
     }    
     
-     /* Sección 2 */
+
+    /* =====================
+       SECCIÓN 2 - UBICACIÓN
+       ===================== */
     .seccion2 { padding: 60px 32px; }
     .mapa     { height: 300px; }
 
-    /* Sección 3 */
+
+    /* ================================
+       SECCIÓN 3 - PREGUNTAS FRECUENTES
+       ================================ */
     .seccion3 { padding: 60px 32px; }
     .pregunta-header { padding: 16px 20px; }
     .respuesta { padding: 0 20px; }
-    .fila.abierta .respuesta { padding: 0 20px 16px; }
+    .fila.abierta .respuesta { padding: 16px 20px 32px; }
       
+
     /* =====================================
        SECCIÓN 4 - BENEFICIOS DE REGISTRARTE
        ===================================== */
-
     .seccion4 { 
         padding: 60px 32px; 
     }
@@ -1136,6 +1131,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+
     h1 { font-size: 34px; }
     h2 { font-size: 28px; }
 
@@ -1157,4 +1153,150 @@ footer {
     footer { padding: 24px 16px; }
 }
 
+.popup-icono {
+    font-size: 56px;
+    margin-bottom: 16px;
+    animation: rock-icon 0.6s ease 0.3s both;
+}
 
+@keyframes rock-icon {
+    0%   { transform: rotate(-20deg) scale(0.5); opacity: 0; }
+    60%  { transform: rotate(10deg) scale(1.2); opacity: 1; }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+.popup-confirmacion-contenido h2 {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    color: #2C191D;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.popup-confirmacion-contenido p {
+    color: #2C191D;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.popup-sub {
+    color: #6E602F !important;
+    font-size: 14px !important;
+    margin-bottom: 32px !important;
+}
+
+.boton-popup-ok {
+    background-color: #D15231;
+    color: #E4C599;
+    border: 3px solid #2C191D;
+    border-radius: 8px;
+    box-shadow: 4px 4px #2C191D;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s, background-color 0.2s;
+}
+
+.boton-popup-ok:hover {
+    background-color: #D15231;
+    transform: translate(-2px,-2px);
+    box-shadow: 6px 6px #2C191D;
+}
+
+.boton-popup-ok:active {
+    transform: translate(2px,2px);
+    box-shadow: 2px 2px #2C191D;
+}
+
+/* Botón cerrar */
+.popup-cerrar {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 40px;
+    height: 40px;
+    background-color: #D15231;
+    color: #E4C599;
+    border: 3px solid #2C191D;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background-color 0.2s, transform 0.15s;
+    z-index: 2;
+}
+
+.popup-cerrar:hover {
+    background-color: #D15231;
+    transform: scale(1.1);
+}
+
+/* ==================
+   RESPONSIVE — 480px
+   ================== */
+@media (max-width: 480px) {
+    header {
+        padding: 0 20px;
+    }
+
+    h1 { font-size: 34px; text-align: center; }
+    h2 { font-size: 28px; }
+
+    .Portada { padding: 20px 20px; }
+
+    .boton-portada { font-size: 15px; padding: 12px 18px; }
+
+    .seccion1, .seccion2, .seccion3, .seccion4, .formulario { 
+        padding: 48px 16px; 
+        width: 100%;
+        overflow: hidden;
+        box-sizing: border-box; 
+    }
+
+    .contador { gap: 6px; padding: 10px; }
+    .caja { width: clamp(58px, 20vw, 90px); }
+    .caja span { font-size: clamp(26px, 8vw, 44px); }
+    .bloque p  { font-size: 12px; }
+
+    .mapa {
+        width: 100% !important;
+        max-width: 100%;
+        margin: 0 auto;
+        box-shadow: 4px 4px 0px #2C191D;
+        box-sizing: border-box;
+    }
+
+    .contenedorTarjetas {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .tarjeta {
+        width: 100% !important;
+        max-width: 100%;
+        margin-bottom: 24px;
+        box-sizing: border-box;
+        box-shadow: 4px 4px 0px #2C191D;
+    }
+
+    .tarjeta img {
+        width: 100%;
+        height: auto;
+    }
+
+    .popup-confirmacion-contenido { padding: 32px 20px; }
+    .popup-confirmacion-contenido h2 { font-size: 28px; }
+
+    footer { padding: 24px 16px; }
+}
