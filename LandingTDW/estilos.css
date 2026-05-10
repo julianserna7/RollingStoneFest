@@ -8,6 +8,29 @@ body {
     overflow-x: hidden;
 }
 
+header {
+    background-color: #E4C599;
+    height: 80px;
+    padding: 0 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #2C191D;
+    color: #2C191D;
+    position: fixed; 
+    top: 0;          
+    left: 0;         
+    width: 100%; 
+    box-sizing: border-box;
+
+    z-index: 100;
+    transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 4px 20px rgba(44,25,29,0.18);
+}
+
 
 /* =========== 
    TIPOGRAFÍAS 
@@ -203,7 +226,11 @@ header nav a:not(.boton-nav):hover {
 }
 
 .logo-fest img {
+<<<<<<< Updated upstream
     height: 26px;
+=======
+    height: 30px;
+>>>>>>> Stashed changes
     width: auto;
     display: block;
     transition: opacity 0.2s;
@@ -277,6 +304,25 @@ header nav a:not(.boton-nav):hover {
         background-image: 
             linear-gradient(to top, #E4C599 0%, rgba(228, 197, 153, 0) 50%),
             url('./imagenes/portada.png');
+    position: relative;
+    overflow: hidden;
+}
+
+.deco {
+    position: absolute;
+    width: 400px; /* ajustá el tamaño */
+    opacity: 0.85;
+    pointer-events: none; /* para que no interfiera con clicks */
+    z-index: 1;
+}
+
+.deco2 {
+    position: absolute;
+    width: 200px; 
+    opacity: 0.95;
+    pointer-events: none; 
+    z-index: 1;
+    
 }
 
 .Portada h1 {
@@ -570,7 +616,7 @@ header nav a:not(.boton-nav):hover {
 .seccion4 {
     background-color: #F69A45;
     margin: 0;
-    padding: 64;
+    padding: 64px;
     min-height: 100vh;
     border-bottom: solid #D15231 4px;
     color: #2C191D;
@@ -601,7 +647,7 @@ header nav a:not(.boton-nav):hover {
     text-align: center;
     width: 100%;
     max-width: 414px;
-    height: 434px;
+    height: 350px;
     padding: 38px;
     margin: 0;
 
@@ -975,6 +1021,15 @@ footer {
         margin-top: 10px;
         width: fit-content;
     }
+<<<<<<< Updated upstream
+=======
+
+    header{
+        padding: 0 25px;
+
+    }
+}
+>>>>>>> Stashed changes
 
     header{
         padding: 0 25px;
@@ -1012,7 +1067,7 @@ footer {
     /* =============================
        SECCIÓN 1 - SOBRE EL FESTIVAL
        ============================= */
-    .seccion1  { padding: 60px 32px; }
+     .seccion1  { padding: 60px 32px; }
 
     .grillaSec1 {                        
         flex-direction: column;
@@ -1060,6 +1115,7 @@ footer {
 
     .bloque p {
         font-size: 14px;
+      
     }    
     
 
@@ -1082,20 +1138,27 @@ footer {
     /* =====================================
        SECCIÓN 4 - BENEFICIOS DE REGISTRARTE
        ===================================== */
+
     .seccion4 { 
-        padding: 60px 32px; 
+        padding: 48px 24px; 
     }
 
     .contenedorTarjetas {
         grid-template-columns: 1fr;
-        max-width: 440px;
+        width: 100%;
+        max-width: 100%;
         gap: 28px;
         padding: 0;        
+        margin: 0 auto;
     }
 
     .tarjeta { 
         max-width: 100%; 
+        max-width: 100%;
+        height: auto;
+        min-height: 300px;
         padding: 28px; 
+        box-sizing: border-box;
     }
 
     /*.contenedorTarjetas {              
@@ -1106,7 +1169,7 @@ footer {
 
     .tarjeta {
         height: auto;
-        min-height: 400px;
+        min-height:300px;
     }                                  
 
     /* ====================== 
@@ -1140,7 +1203,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-
     h1 { font-size: 34px; }
     h2 { font-size: 28px; }
 
@@ -1162,150 +1224,4 @@ footer {
     footer { padding: 24px 16px; }
 }
 
-.popup-icono {
-    font-size: 56px;
-    margin-bottom: 16px;
-    animation: rock-icon 0.6s ease 0.3s both;
-}
 
-@keyframes rock-icon {
-    0%   { transform: rotate(-20deg) scale(0.5); opacity: 0; }
-    60%  { transform: rotate(10deg) scale(1.2); opacity: 1; }
-    100% { transform: rotate(0deg) scale(1); }
-}
-
-.popup-confirmacion-contenido h2 {
-    font-family: "Fraunces", serif;
-    font-style: italic;
-    color: #2C191D;
-    font-size: 36px;
-    margin-bottom: 16px;
-}
-
-.popup-confirmacion-contenido p {
-    color: #2C191D;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 8px;
-}
-
-.popup-sub {
-    color: #6E602F !important;
-    font-size: 14px !important;
-    margin-bottom: 32px !important;
-}
-
-.boton-popup-ok {
-    background-color: #D15231;
-    color: #E4C599;
-    border: 3px solid #2C191D;
-    border-radius: 8px;
-    box-shadow: 4px 4px #2C191D;
-    font-family: "Poppins", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 12px 32px;
-    cursor: pointer;
-    transition: transform 0.15s, box-shadow 0.15s, background-color 0.2s;
-}
-
-.boton-popup-ok:hover {
-    background-color: #D15231;
-    transform: translate(-2px,-2px);
-    box-shadow: 6px 6px #2C191D;
-}
-
-.boton-popup-ok:active {
-    transform: translate(2px,2px);
-    box-shadow: 2px 2px #2C191D;
-}
-
-/* Botón cerrar */
-.popup-cerrar {
-    position: absolute;
-    top: -18px;
-    right: -18px;
-    width: 40px;
-    height: 40px;
-    background-color: #D15231;
-    color: #E4C599;
-    border: 3px solid #2C191D;
-    border-radius: 50%;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    transition: background-color 0.2s, transform 0.15s;
-    z-index: 2;
-}
-
-.popup-cerrar:hover {
-    background-color: #D15231;
-    transform: scale(1.1);
-}
-
-/* ==================
-   RESPONSIVE — 480px
-   ================== */
-@media (max-width: 480px) {
-    header {
-        padding: 0 20px;
-    }
-
-    h1 { font-size: 34px; text-align: center; }
-    h2 { font-size: 28px; }
-
-    .Portada { padding: 20px 20px; }
-
-    .boton-portada { font-size: 15px; padding: 12px 18px; }
-
-    .seccion1, .seccion2, .seccion3, .seccion4, .formulario { 
-        padding: 48px 16px; 
-        width: 100%;
-        overflow: hidden;
-        box-sizing: border-box; 
-    }
-
-    .contador { gap: 6px; padding: 10px; }
-    .caja { width: clamp(58px, 20vw, 90px); }
-    .caja span { font-size: clamp(26px, 8vw, 44px); }
-    .bloque p  { font-size: 12px; }
-
-    .mapa {
-        width: 100% !important;
-        max-width: 100%;
-        margin: 0 auto;
-        box-shadow: 4px 4px 0px #2C191D;
-        box-sizing: border-box;
-    }
-
-    .contenedorTarjetas {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        padding: 0;
-        margin: 0 auto;
-    }
-
-    .tarjeta {
-        width: 100% !important;
-        max-width: 100%;
-        margin-bottom: 24px;
-        box-sizing: border-box;
-        box-shadow: 4px 4px 0px #2C191D;
-    }
-
-    .tarjeta img {
-        width: 100%;
-        height: auto;
-    }
-
-    .popup-confirmacion-contenido { padding: 32px 20px; }
-    .popup-confirmacion-contenido h2 { font-size: 28px; }
-
-    footer { padding: 24px 16px; }
-}
