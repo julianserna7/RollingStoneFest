@@ -21,6 +21,13 @@ header {
     left: 0;         
     width: 100%; 
     box-sizing: border-box;
+
+    z-index: 100;
+    transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 4px 20px rgba(44,25,29,0.18);
 }
 
 
@@ -96,6 +103,29 @@ ul {
 }
 
 
+/* ANIMACION DE APARICION*/
+.reveal-fade-up,
+.reveal-slide-left,
+.reveal-slide-right {
+    opacity: 0;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition-delay: var(--delay, 0ms);
+}
+
+.reveal-fade-up    { transform: translateY(40px); }
+.reveal-slide-left { transform: translateX(-50px); }
+.reveal-slide-right{ transform: translateX(50px); }
+
+.reveal-fade-up.visible,
+.reveal-slide-left.visible,
+.reveal-slide-right.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* FIN DE ANIMACION APARICION */
+
+
 /* ========= 
     NAV Y UL 
    ========= */
@@ -116,18 +146,55 @@ header nav a {
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
+
+    position: relative;
+
     transition: 0.2s;
 }
 
+/* AGREGADO */
+
+header nav a:not(.boton-nav)::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #D15231;
+    transition: width 0.25s ease;
+}
+
+header nav a:not(.boton-nav):hover::after { 
+    width: 100%; 
+}
+
+header nav a:not(.boton-nav):hover { 
+    color: #D15231; 
+}
+
+
+
+/* FIN DE AGREGADO */
+
 .boton-nav {
     background-color: #D15231;
-    color: #E4C599;
+    color: #E4C599 !important;
     border: 3px #2C191D solid;
     border-radius: 8px;
     box-shadow: 4px 4px 0px #2C191D;
     font-weight: bold;
     padding: 10px 20px;
     display: inline-block;
+
+    display: inline-block;
+    transition: box-shadow 0.15s ease, transform 0.15s ease, background-color 0.2s;
+}
+
+.boton-nav:hover { /* AGREGADO */
+    background-color: #D15231;
+    box-shadow: 6px 6px 0px #2C191D;
+    transform: translate(-1px, -1px);
 }
 
 .boton-nav:active {
@@ -156,6 +223,45 @@ header nav a {
 #menu-check, .menu-icono {
     display: none;
 }
+
+/* Menu (tincho) */
+
+
+.menu-icono {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 20;
+    padding: 6px;
+}
+
+.hamburger-line {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #2C191D;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animación X al abrir menú */
+#menu-check:checked ~ .menu-icono .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+#menu-check:checked ~ .menu-icono .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+#menu-check:checked ~ .menu-icono .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* FIN menu (tincho)*/
+
+
+
+
 
 
 /* ========= 
@@ -367,58 +473,102 @@ header nav a {
     overflow: hidden;
     box-shadow: 8px 8px #2C191D;
     margin: 0 auto;
-    background-color: #E4C599;
+
+    background-color: #E4C599; 
 }
 
 .fila {
     border-bottom: solid #2C191D 4px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .fila:last-child {
     border-bottom: none;
 }
 
+.pregunta-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+    gap: 16px;
+}
+
 .pregunta {  
     text-align: left;
     font-weight: bold;
-    padding: 24px 32px;
+    /*padding: 24px 32px;
+    padding: 16px;*/
+    padding: 10px;
     margin: 0;
-    cursor: pointer;
-    transition: all;
+
+    cursor: pointer; 
+    /*transition: all;*/
+    transition: max-height 0.4s ease, padding 0.3s ease;
+
 }
 
-/* Hover y Estado Abierto de la pregunta */
-.pregunta:hover, .fila.abierta .pregunta {
+
+.fila:hover .pregunta-header {
     background-color: #2C191D;
     color: #E4C599;
 }
 
-/* Lógica de Animación para la respuesta */
+
 .respuesta-container {
     display: grid;
-    grid-template-rows: 0fr; /* Altura colapsada */
-    transition: grid-template-rows 0.4s ease;
+
+    grid-template-rows: 0fr; 
+    transition: grid-template-rows 0.4s ease; 
+
     overflow: hidden;
 }
 
 .fila.abierta .respuesta-container {
-    grid-template-rows: 1fr; /* Altura expandida */
+    grid-template-rows: 1fr; 
 }
 
 .respuesta {
     min-height: 0;
-    padding: 0 32px; /* Padding lateral */
+    padding: 0 32px; 
     margin: 0;
     text-align: left;
     color: #2C191D;
+    
     transition: padding 0.4s ease;
 }
 
 .fila.abierta .respuesta {
     padding-bottom: 48px;
-    padding-top: 16px;
-}                                      /* FIN DE GRILLA */
+
+    padding-top: 16px; 
+} /* FIN DE GRILLA */
+
+/* ICON */
+
+.faq-icon {
+    font-size: 24px;
+    font-weight: 700;
+    color: #D15231;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    line-height: 1;
+}
+
+.fila.abierta .faq-icon {
+    transform: rotate(45deg);
+    color: #D15231;
+}
+
+.fila.abierta .pregunta-header {
+    background-color: #2C191D;
+    color: #E4C599;
+}
+
+
+/* --- FIN SECCIÓN 3 --- */
+
 
 
 /* =====================================
@@ -451,13 +601,24 @@ header nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     box-sizing: border-box;
+
     text-align: center;
     width: 100%;
     max-width: 414px;
     height: 434px;
     padding: 38px;
     margin: 0;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+}
+
+.tarjeta:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px #2C191D;
+
 }
 
 .tarjeta h4 {
@@ -570,7 +731,7 @@ input[type="email"].invalido {
 }
 
 .boton-submit:hover {
-    background-color: #b8431f;
+    background-color: #D15231;
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px #2C191D;
 }
@@ -881,7 +1042,17 @@ footer {
     .bloque p {
         font-size: 16px;
         margin-top: 8px;
-    }                                  
+    }    
+    
+     /* Sección 2 */
+    .seccion2 { padding: 60px 32px; }
+    .mapa     { height: 300px; }
+
+    /* Sección 3 */
+    .seccion3 { padding: 60px 32px; }
+    .pregunta-header { padding: 16px 20px; }
+    .respuesta { padding: 0 20px; }
+    .fila.abierta .respuesta { padding: 0 20px 16px; }
       
     /* =====================================
        SECCIÓN 4 - BENEFICIOS DE REGISTRARTE
@@ -919,3 +1090,104 @@ footer {
     }
 }
 
+.popup-confirmacion-contenido {
+    background-color: #E4C599;
+    border: 4px solid #2C191D;
+    border-radius: 12px;
+    box-shadow: 10px 10px #2C191D;
+    padding: 48px 40px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    transform: scale(0.85) translateY(20px);
+    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+.popup-overlay.activo .popup-confirmacion-contenido {
+    transform: scale(1) translateY(0);
+}
+
+.popup-icono {
+    font-size: 56px;
+    margin-bottom: 16px;
+    animation: rock-icon 0.6s ease 0.3s both;
+}
+
+@keyframes rock-icon {
+    0%   { transform: rotate(-20deg) scale(0.5); opacity: 0; }
+    60%  { transform: rotate(10deg) scale(1.2); opacity: 1; }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+.popup-confirmacion-contenido h2 {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    color: #2C191D;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.popup-confirmacion-contenido p {
+    color: #2C191D;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.popup-sub {
+    color: #6E602F !important;
+    font-size: 14px !important;
+    margin-bottom: 32px !important;
+}
+
+.boton-popup-ok {
+    background-color: #D15231;
+    color: #E4C599;
+    border: 3px solid #2C191D;
+    border-radius: 8px;
+    box-shadow: 4px 4px #2C191D;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s, background-color 0.2s;
+}
+
+.boton-popup-ok:hover {
+    background-color: #D15231;
+    transform: translate(-2px,-2px);
+    box-shadow: 6px 6px #2C191D;
+}
+
+.boton-popup-ok:active {
+    transform: translate(2px,2px);
+    box-shadow: 2px 2px #2C191D;
+}
+
+/* Botón cerrar (✕) */
+.popup-cerrar {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 40px;
+    height: 40px;
+    background-color: #D15231;
+    color: #E4C599;
+    border: 3px solid #2C191D;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background-color 0.2s, transform 0.15s;
+    z-index: 2;
+}
+
+.popup-cerrar:hover {
+    background-color: #D15231;
+    transform: scale(1.1);
+}

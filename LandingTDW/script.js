@@ -204,4 +204,26 @@ document.addEventListener('DOMContentLoaded', () => {
         popup.classList.remove('activo');
     });
 
+
+
+    /* ANIMACION APARICION */
+const revealEls = document.querySelectorAll(
+        '.reveal-fade-up, .reveal-slide-left, .reveal-slide-right'
+    );
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    /* FIN DE ANIMACION APARICION */
+
 });
+
+

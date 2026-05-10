@@ -21,8 +21,10 @@
 
         <input type="checkbox" id="menu-check">
 
-        <label for="menu-check" class="menu-icono">
-            <img src="./imagenes/icono-menu.png" alt="Abrir menú">
+        <label for="menu-check" class="menu-icono" aria-label="Abrir menú">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
         </label>
 
         <nav>
@@ -37,25 +39,27 @@
     </header>
 
     <section id="inicio" class="Portada">
-        <h1>Viví el <span class="resaltado">festival</span> que va a marcar el año</h1>
-        <p class="resaltado3"> Un evento único que reúne a los artistas más destacados del momento te espera este <span
-                class="resaltado2">viernes 13 y sábado 14 de noviembre</span>, con apertura de puertas a partir de las
-            <span class="resaltado2">14:00 hs</span>. Enterate antes que nadie de la preventa exclusiva y las
-            actividades complementarias.
-        </p>
-        <a href="#registrate" class="boton-portada">Registrate para recibir novedades</a>
+        <div class="portada-contenido reveal-fade-up">
+            <h1>Viví el <span class="resaltado">festival</span> que va a marcar el año</h1>
+            <p class="resaltado3"> Un evento único que reúne a los artistas más destacados del momento te espera este <span
+                    class="resaltado2">viernes 13 y sábado 14 de noviembre</span>, con apertura de puertas a partir de las
+                <span class="resaltado2">14:00 hs</span>. Enterate antes que nadie de la preventa exclusiva y las
+                actividades complementarias.
+            </p>
+            <a href="#registrate" class="boton-portada">Registrate para recibir novedades</a>
+        </div>
     </section>
 
     <section class="seccion1" id="festival">
 
-        <h2>Sobre el festival</h2>
+        <h2 class="reveal-fade-up">Sobre el festival</h2>
 
         <div class="grillaSec1">
-            <div class="contenedor-lineup">
+            <div class="contenedor-lineup reveal-slide-left">
                 <img src="./imagenes/flyer-lineup.png" alt="lineup" class="lineup">
             </div>
 
-            <div class="texto">
+            <div class="texto reveal-slide-right">
                 <h3>Acceso anticipado y contenido exclusivo</h3>
                 <p>Al registrarte vas a poder acceder a información exclusiva sobre la preventa y las actividades
                     complementarias. Además, vas a recibir notificaciones anticipadas con contenido exclusivo de los
@@ -72,7 +76,7 @@
             </div>
         </div>
 
-        <section class="seccion-contador">
+        <section class="seccion-contador reveal-fade-up">
 
             <h2>Faltan...</h2>
 
@@ -116,49 +120,76 @@
     </section>
 
     <section class="seccion2" id="ubicacion">
-        <h2>Ubicación</h2>
-        <h4>Hipódromo de San Isidro, Buenos Aires</h4>
+        <h2 class="reveal-fade-up">Ubicación</h2>
+        <h4 class="reveal-fade-up">Hipódromo de San Isidro, Buenos Aires</h4>
 
+        <div class="reveal-fade-up mapa-wrapper">
         <iframe class="mapa"
             src="https://maps.google.com/?output=embed&q=Hipodromo+de+San+Isidro%2C+Buenos+Aires&z=8"></iframe>
+        </div>
 
     </section>
 
     <section class="seccion3" id="preguntas">
-        <h2>Preguntas frecuentes</h2>
-        <h4>Resolvé tus dudas antes de registrarte</h4>
+        <h2 class="reveal-fade-up">Preguntas frecuentes</h2>
+        <h4 class="reveal-fade-up">Resolvé tus dudas antes de registrarte</h4>
 
-        <section class="grillaFAQ">
+        <section class="grillaFAQ reveal-fade-up">
             <div class="fila">
-                <p class="pregunta">¿Desde qué edad se puede ingresar al festival?</p>
+
+                <div class="pregunta-header">
+                    <p class="pregunta">¿Desde qué edad se puede ingresar al festival?</p>
+                    <span class="faq-icon">+</span>
+                </div>
+
                 <div class="respuesta-container">
                     <p class="respuesta">El ingreso está habilitado a partir de los 16 años, presentando DNI.</p>
                 </div>
             </div>
 
             <div class="fila">
-                <p class="pregunta">¿A qué hora abre el predio?</p>
+
+                <div class="pregunta-header">
+                    <p class="pregunta">¿A qué hora abre el predio?</p>
+                    <span class="faq-icon">+</span>
+                </div>
+
                 <div class="respuesta-container">
                     <p class="respuesta">Las puertas se habilitan a las 14:00 hs.</p>
                 </div>
             </div>
 
             <div class="fila">
-                <p class="pregunta">¿A qué hora finaliza?</p>
+
+                <div class="pregunta-header">
+                    <p class="pregunta">¿A qué hora finaliza?</p>
+                    <span class="faq-icon">+</span>
+                </div>
+
                 <div class="respuesta-container">
                     <p class="respuesta">La jornada se extenderá hasta las 22.00 hs</p>
                 </div>
             </div>
 
             <div class="fila">
-                <p class="pregunta">¿Se puede ingresar con comida o bebida?</p>
+
+                <div class="pregunta-header">
+                    <p class="pregunta">¿Se puede ingresar con comida o bebida?</p>
+                    <span class="faq-icon">+</span>
+                </div>
+
                 <div class="respuesta-container">
                     <p class="respuesta">No está permitido el ingreso con comida ni bebida al predio.</p>
                 </div>
             </div>
 
             <div class="fila">
-                <p class="pregunta">¿Está permitido ingresar con mochilas o bolsas?</p>
+
+                <div class="pregunta-header">
+                    <p class="pregunta">¿Está permitido ingresar con mochilas o bolsas?</p>
+                    <span class="faq-icon">+</span>
+                </div>
+
                 <div class="respuesta-container">
                     <p class="respuesta">Sí, se permite el ingreso con mochilas pequeñas, sujetas a control en el
                         acceso.
@@ -167,7 +198,12 @@
             </div>
 
             <div class="fila">
-                <p class="pregunta">¿Qué pasa si llueve?</p>
+
+                <div class="pregunta-header">
+                    <p class="pregunta">¿Qué pasa si llueve?</p>
+                    <span class="faq-icon">+</span>
+                </div>
+
                 <div class="respuesta-container">
                     <p class="respuesta">El evento se realiza aunque llueva, salvo que las condiciones climáticas
                         representen un riesgo para el público o los artistas.</p>
@@ -178,26 +214,26 @@
     </section>
 
     <section class="seccion4" id="beneficios">
-        <h2>Beneficios de registrarte</h2>
-        <h4>Todo lo que obtenes al dejar tus datos</h4>
+        <h2 class="reveal-fade-up">Beneficios de registrarte</h2>
+        <h4 class="reveal-fade-up">Todo lo que obtenes al dejar tus datos</h4>
 
         <div class="contenedorTarjetas">
-            <div class="tarjeta">
+            <div class="tarjeta reveal-fade-up" style="--delay: 0ms" >
                 <img src="./imagenes/tickets2.png" alt="tickets">
                 <h4>Acceso anticipado a la venta de entradas.</h4>
             </div>
 
-            <div class="tarjeta">
+            <div class="tarjeta reveal-fade-up" style="--delay: 0ms">
                 <img src="./imagenes/artista2.png" alt="artista">
                 <h4>Lineup con artistas nacionales e internacionales.</h4>
             </div>
 
-            <div class="tarjeta">
+            <div class="tarjeta reveal-fade-up" style="--delay: 0ms">
                 <img src="./imagenes/entrevista2.png" alt="entrevista">
                 <h4>Información exclusiva del evento.</h4>
             </div>
 
-            <div class="tarjeta">
+            <div class="tarjeta reveal-fade-up" style="--delay: 0ms">
                 <img src="./imagenes/cartas2.png" alt="cartas">
                 <h4>Novedades directo a tu mail.</h4>
             </div>
@@ -272,6 +308,16 @@
     <footer>
         <p> © Rolling Stone Fest 2026</p>
     </footer>
+
+    <div class="popup-overlay" id="popup-confirmacion" role="dialog" aria-modal="true" aria-label="Registro confirmado">
+        <div class="popup-contenido popup-confirmacion-contenido">
+            <div class="popup-icono">🎸</div>
+            <h2>¡Ya estás dentro!</h2>
+            <p>Te registraste con éxito. Vas a ser de las primeras personas en recibir novedades del <strong>Rolling Stone Fest 2026</strong>.</p>
+            <p class="popup-sub">Revisá tu casilla de correo en los próximos días.</p>
+            <button class="boton-popup-ok" id="cerrar-confirmacion">¡Perfecto!</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
