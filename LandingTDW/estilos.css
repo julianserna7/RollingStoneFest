@@ -226,11 +226,7 @@ header nav a:not(.boton-nav):hover {
 }
 
 .logo-fest img {
-<<<<<<< Updated upstream
-    height: 26px;
-=======
     height: 30px;
->>>>>>> Stashed changes
     width: auto;
     display: block;
     transition: opacity 0.2s;
@@ -1021,15 +1017,6 @@ footer {
         margin-top: 10px;
         width: fit-content;
     }
-<<<<<<< Updated upstream
-=======
-
-    header{
-        padding: 0 25px;
-
-    }
-}
->>>>>>> Stashed changes
 
     header{
         padding: 0 25px;
@@ -1223,5 +1210,3 @@ footer {
 
     footer { padding: 24px 16px; }
 }
-
-
