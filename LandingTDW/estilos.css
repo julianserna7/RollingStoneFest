@@ -198,10 +198,12 @@ header nav a:not(.boton-nav):hover {
     align-items: center;
     height: 100%;
     box-sizing: border-box;
+    max-width: 500px;
+    overflow: hidden;
 }
 
 .logo-fest img {
-    height: 40px;
+    height: 26px;
     width: auto;
     display: block;
     transition: opacity 0.2s;
@@ -211,7 +213,11 @@ header nav a:not(.boton-nav):hover {
     opacity: 0.8;
 }
 
-#menu-check, .menu-icono {
+#menu-check {
+    display: none;
+}
+
+.menu-icono{
     display: none;
 }
 
@@ -250,7 +256,6 @@ header nav a:not(.boton-nav):hover {
     transform: translateY(-8px) rotate(-45deg);
 }
 /* FIN menu (tincho)*/
-
 
 /* ========= 
     PORTADA 
@@ -928,13 +933,13 @@ footer {
         NAV Y UL 
        ========= */  
     .menu-icono {
-        display: block;
+        display: flex;
         cursor: pointer;
         z-index: 20;
     }
 
     .menu-icono img {
-        height: 30px;
+        height: 20px;
         width: auto;
     }
 
@@ -970,8 +975,12 @@ footer {
         margin-top: 10px;
         width: fit-content;
     }
-}
 
+    header{
+        padding: 0 25px;
+
+    }
+}
 
 /* ================ 
    RESPONSIVE - 980px 
