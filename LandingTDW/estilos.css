@@ -4,8 +4,10 @@ html {
 }
 
 body {
-    margin: 0px;
+    margin: 0;
+    max-width: 100%;
     overflow-x: hidden;
+    position: relative;
 }
 
 
@@ -338,17 +340,20 @@ header nav a:not(.boton-nav):hover {
     box-shadow: 2px 2px #2C191D;
 }
 
+.seccion1, .seccion2, .seccion3, .seccion4 {
+    padding: 64px 64px;
+    border-bottom: solid #2C191D 4px;
+    color: #2C191D;
+    position: relative;
+    overflow: hidden;
+}
 
 /* ============================= 
    SECCIÓN 1 - SOBRE EL FESTIVAL 
    ============================= */
 .seccion1 {
     background-color: #6E602F;
-    padding: 64px 64px;
-    border-bottom: solid #2C191D 4px;
     color: #E4C599;
-    position: relative;
-    overflow: hidden;
 }
 
 .grillaSec1 {
@@ -481,13 +486,6 @@ header nav a:not(.boton-nav):hover {
    ===================== */
 .seccion2 {
     background-color: #E4C599;
-    margin: 0;
-    padding: 64;
-    min-height: 50vh;
-    border-bottom: solid #2C191D 4px;
-    color: #2C191D;
-    position: relative;
-    overflow: hidden;
 }
 
 .deco6 {
@@ -523,7 +521,6 @@ header nav a:not(.boton-nav):hover {
     width: 220px; 
     pointer-events: none; 
     z-index: 0;
-    
 }
 
 .deco8 {
@@ -531,7 +528,6 @@ header nav a:not(.boton-nav):hover {
     width: 330px; 
     pointer-events: none; 
     z-index: 0;
-    
 }
 
 
@@ -540,12 +536,6 @@ header nav a:not(.boton-nav):hover {
    ================================ */
 .seccion3 {
     background-color: #E4C599;
-    margin: 0;
-    padding: 64px;
-    border-bottom: solid #2C191D 4px;
-    color: #2C191D;
-    position: relative;
-    overflow: hidden;
 }
 
 .deco9 {
@@ -554,7 +544,6 @@ header nav a:not(.boton-nav):hover {
     pointer-events: none; 
     z-index: 0;
     transform: rotate(13deg);
-    
 }
 
 .deco10 {
@@ -563,7 +552,6 @@ header nav a:not(.boton-nav):hover {
     pointer-events: none; 
     z-index: 0;
     transform: rotate(3deg);
-    
 }
 
 .deco11 {
@@ -571,7 +559,6 @@ header nav a:not(.boton-nav):hover {
     width: 330px; 
     pointer-events: none; 
     z-index: 0;
-    
 }
 
 /* GRILLA PREGUNTAS */
@@ -676,13 +663,7 @@ header nav a:not(.boton-nav):hover {
    ===================================== */
 .seccion4 {
     background-color: #F69A45;
-    margin: 0;
-    padding: 64px;
-    min-height: 100vh;
     border-bottom: solid #D15231 4px;
-    color: #2C191D;
-    position: relative;
-    overflow: hidden;
 }
 
 /* TARJETAS */
@@ -885,16 +866,17 @@ input[type="email"].invalido {
 .dropdown {                            
     position: relative;
     display: block;
+    margin-bottom: 18px;
 }
 
 .dropbtn {
     background-color: white;
     cursor: pointer;
     text-align: left;
-    font-size: 15px;
+    font-size: 16px;
     width: 100%;
     padding: 10px 12px;
-    margin-bottom: 18px;
+    margin-bottom: 0; 
     font-family: "Poppins", sans-serif;
     border: 3px #2C191D solid;
     border-radius: 8px;
@@ -1077,9 +1059,6 @@ footer {
 @media (max-width: 1230px) {
     .seccion1, .seccion2, .seccion3, .seccion4, .formulario {
         padding: 48px 32px;
-        width: 100%;
-        overflow: hidden;
-        box-sizing: border-box;
     }
 
 
@@ -1166,7 +1145,6 @@ footer {
 @media (max-width: 980px) {
     .seccion1, .seccion2, .seccion3, .seccion4, .formulario {
         padding: 48px 24px; 
-        width: 100%;
     }
 
 
@@ -1295,13 +1273,9 @@ footer {
         min-height: 300px;
         padding: 24px; 
         box-sizing: border-box;
-    }
-    
-    .tarjeta {
         height: auto;
-        min-height:300px;
-    }        
-
+    }
+        
 
     /* ====================== 
        SECCIÓN 5 - FORMULARIO 
@@ -1339,7 +1313,6 @@ footer {
 @media (max-width: 480px) {
     .seccion1, .seccion2, .seccion3, .seccion4, .formulario {
         padding: 48px 16px;
-        width: 100%;
     }
 
     h1 { font-size: 48px; }
@@ -1437,6 +1410,7 @@ footer {
     .carta {
         box-shadow: 6px 6px #E4C599;
     }
+    
     .popup-confirmacion-contenido { padding: 32px 20px; }
     .popup-confirmacion-contenido h2 { font-size: 28px; }
 }
