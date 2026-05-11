@@ -281,6 +281,7 @@ header nav a:not(.boton-nav):hover {
             url('./imagenes/portada.png');
     position: relative;
     overflow: hidden;
+    z-index: 2;
 }
 
 .deco {
@@ -288,7 +289,7 @@ header nav a:not(.boton-nav):hover {
     width: 400px;
     opacity: 0.85;
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
 }
 
 .deco2 {
@@ -296,7 +297,7 @@ header nav a:not(.boton-nav):hover {
     width: 200px; 
     opacity: 0.95;
     pointer-events: none; 
-    z-index: 1;
+    z-index: 0;
     
 }
 
@@ -327,6 +328,7 @@ header nav a:not(.boton-nav):hover {
     cursor: pointer;
     box-shadow: 4px 4px #2C191D; 
     transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s;
+    z-index: 2;
 }
 
 .boton-portada:hover {
@@ -415,6 +417,7 @@ header nav a:not(.boton-nav):hover {
     padding-top: 64px;
     text-align: center;
     position: relative;
+    z-index: 2;
 }
 
 .deco4 {
@@ -445,6 +448,7 @@ header nav a:not(.boton-nav):hover {
     border-radius: 8px;
     box-shadow: 8px 8px 0px #2C191D;
     padding: 24px;
+    z-index: 2;
 }
 
 .caja {                                
@@ -664,6 +668,37 @@ header nav a:not(.boton-nav):hover {
 .seccion4 {
     background-color: #F69A45;
     border-bottom: solid #D15231 4px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.deco16 {
+    position: absolute;
+    width: 360px; 
+    pointer-events: none; 
+    z-index: 0;
+}
+
+.deco17 {
+    position: absolute;
+    width: 360px; 
+    pointer-events: none; 
+    z-index: 0;
+}
+
+.deco18 {
+    position: absolute;
+    width: 360px; 
+    pointer-events: none; 
+    z-index: 0;
+}
+
+.deco19 {
+    position: absolute;
+    width: 261px; 
+    pointer-events: none; 
+    z-index: 0;
 }
 
 /* TARJETAS */
@@ -730,6 +765,7 @@ header nav a:not(.boton-nav):hover {
     color: #E4C599;
     position: relative;
     overflow: hidden;
+    z-index: 2;
 }
 
 .deco12 {
@@ -775,14 +811,21 @@ header nav a:not(.boton-nav):hover {
     z-index: 2;
 }
 
-.carta h1 { text-align: center; margin-top: 0; margin-bottom: 12px; }
-.carta h4 { margin-bottom: 36px; }
+.carta h1 { text-align: center; 
+    margin-top: 0; 
+    margin-bottom: 12px; 
+}
+
+.carta h4 { 
+    margin-bottom: 36px; 
+}
 
 .grillaForm {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
     text-align: left;
+    z-index: 2;
 }
 
 .campo {
@@ -849,6 +892,8 @@ input[type="email"].invalido {
     margin: 40px auto 8px;
     white-space: normal;
     transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s;
+    position: relative;
+    z-index: 2;
 }
 
 .boton-submit:hover {
