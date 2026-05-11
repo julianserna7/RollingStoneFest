@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    /* ANIMACION APARICION */
+    /* ANIMACION APARICIÓN */
 const revealEls = document.querySelectorAll(
         '.reveal-fade-up, .reveal-slide-left, .reveal-slide-right'
     );
@@ -222,7 +222,7 @@ const revealEls = document.querySelectorAll(
 
     revealEls.forEach(el => revealObserver.observe(el));
 
-    /* FIN DE ANIMACION APARICION */
+    /* FIN DE ANIMACION APARICIÓN */
 
 });
 

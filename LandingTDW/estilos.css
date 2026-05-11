@@ -265,9 +265,9 @@ header nav a:not(.boton-nav):hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 80vh;
+    height: 76vh;
     margin: 0;
-    padding: 80px 64px; 
+    padding: 160px 64px 80px 64px; 
     border-bottom: solid #2C191D 4px;
     color: #2C191D;
     display: flex;
@@ -283,9 +283,9 @@ header nav a:not(.boton-nav):hover {
 
 .deco {
     position: absolute;
-    width: 400px; /* ajustá el tamaño */
+    width: 400px;
     opacity: 0.85;
-    pointer-events: none; /* para que no interfiera con clicks */
+    pointer-events: none;
     z-index: 1;
 }
 
@@ -299,15 +299,16 @@ header nav a:not(.boton-nav):hover {
 }
 
 .Portada h1 {
-    max-width: 650px; 
+    max-width: 640px;
     line-height: 1.1;
     margin-bottom: 24px;
 }
 
 .Portada p {
-    max-width: 650px;
+    max-width: 640px;
     line-height: 1.5;
     margin-bottom: 40px;
+    font-size: 20px;
 }
 
 .boton-portada {
@@ -316,7 +317,7 @@ header nav a:not(.boton-nav):hover {
     background-color: #D15231; 
     color: #E4C599; 
     font-family: "Poppins", sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     padding: 12px 24px;
     border: 3px solid #2C191D;
@@ -338,8 +339,6 @@ header nav a:not(.boton-nav):hover {
 }
 
 
-
-
 /* ============================= 
    SECCIÓN 1 - SOBRE EL FESTIVAL 
    ============================= */
@@ -349,6 +348,7 @@ header nav a:not(.boton-nav):hover {
     border-bottom: solid #2C191D 4px;
     color: #E4C599;
     position: relative;
+    overflow: hidden;
 }
 
 .grillaSec1 {
@@ -405,8 +405,9 @@ header nav a:not(.boton-nav):hover {
     line-height: 1.6;
 }
 
-.seccion-contador {                /* COMIENZO CONTADOR */    
-    padding: 64px;
+/* CONTADOR */ 
+.seccion-contador {                   
+    padding-top: 64px;
     text-align: center;
     position: relative;
 }
@@ -416,7 +417,6 @@ header nav a:not(.boton-nav):hover {
     width: 380px; 
     pointer-events: none; 
     z-index: 0;
-    
 }
 
 .deco5 {
@@ -427,20 +427,19 @@ header nav a:not(.boton-nav):hover {
     transform: rotate(30deg);
 }
 
-.contador {                                                            
+.contador {                                                    
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    /* CAMBIO CLAVE: */
     width: fit-content; 
-    max-width: 90%; /* Para que no toque los bordes en pantallas medianas */
+    max-width: 90%;
     gap: 16px;
     background-color: #9D8959;
     border: solid #2C191D 4px;
     border-radius: 8px;
     box-shadow: 8px 8px 0px #2C191D;
-    padding: 24px; /* Aumentamos un poco el padding para que respire como en Figma */
+    padding: 24px;
 }
 
 .caja {                                
@@ -474,7 +473,7 @@ header nav a:not(.boton-nav):hover {
     font-weight: bold;
     font-size: 24px;
     color: #E4C599;
-}                                      /* FIN CONTADOR */
+}                                   
 
 
 /* =====================
@@ -487,8 +486,8 @@ header nav a:not(.boton-nav):hover {
     min-height: 50vh;
     border-bottom: solid #2C191D 4px;
     color: #2C191D;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
 
 .deco6 {
@@ -575,8 +574,8 @@ header nav a:not(.boton-nav):hover {
     
 }
 
-
-.grillaFAQ {                           /* GRILLA */
+/* GRILLA PREGUNTAS */
+.grillaFAQ {                           
     display: grid;
     grid-template-columns: 1fr;
     max-width: 1140px;
@@ -586,7 +585,6 @@ header nav a:not(.boton-nav):hover {
     box-shadow: 8px 8px #2C191D;
     margin: 0 auto;
     background-color: #E4C599; 
-
     position: relative;
     z-index: 2;
 }
@@ -640,7 +638,6 @@ header nav a:not(.boton-nav):hover {
     margin: 0;
     text-align: left;
     color: #2C191D;
-    
     transition: padding 0.4s ease;
 }
 
@@ -648,9 +645,8 @@ header nav a:not(.boton-nav):hover {
     padding-bottom: 48px;
     padding-top: 16px; 
 } 
-/* FIN DE GRILLA */
 
-/* ICON */
+/* ÍCONO */
 .faq-icon {
     font-size: 24px;
     font-weight: 700;
@@ -673,8 +669,6 @@ header nav a:not(.boton-nav):hover {
     background-color: #2C191D;
     color: #E4C599;
 }
-/* --- FIN SECCIÓN 3 --- */
-
 
 
 /* =====================================
@@ -687,6 +681,8 @@ header nav a:not(.boton-nav):hover {
     min-height: 100vh;
     border-bottom: solid #D15231 4px;
     color: #2C191D;
+    position: relative;
+    overflow: hidden;
 }
 
 /* TARJETAS */
@@ -696,7 +692,7 @@ header nav a:not(.boton-nav):hover {
     gap: 48px;
     max-width: 890px;
     justify-items: center;
-    align-items: center;
+    align-items: stretch;
     position: relative;
     margin: 0 auto;
 }              
@@ -713,8 +709,9 @@ header nav a:not(.boton-nav):hover {
     align-items: center;
     box-sizing: border-box;
     text-align: center; 
-    max-width: 414px;
-    max-height: 400px;
+    height: 100%;
+    min-height: 400px; 
+    max-height: 426px;
     padding: 38px;
     margin: 0;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -728,6 +725,9 @@ header nav a:not(.boton-nav):hover {
 
 .tarjeta h4 {
     margin: 16px 0 0 0;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
 }
 
 .tarjeta img {
@@ -747,7 +747,6 @@ header nav a:not(.boton-nav):hover {
     padding: 80px 64px;
     margin: 0;
     color: #E4C599;
-
     position: relative;
     overflow: hidden;
 }
@@ -895,6 +894,7 @@ input[type="email"].invalido {
     font-size: 15px;
     width: 100%;
     padding: 10px 12px;
+    margin-bottom: 18px;
     font-family: "Poppins", sans-serif;
     border: 3px #2C191D solid;
     border-radius: 8px;
@@ -1076,11 +1076,12 @@ footer {
    =================== */
 @media (max-width: 1230px) {
     .seccion1, .seccion2, .seccion3, .seccion4, .formulario {
-        padding: 48px 32px; /* Reducimos un poco el padding lateral */
+        padding: 48px 32px;
         width: 100%;
         overflow: hidden;
         box-sizing: border-box;
     }
+
 
     /* ========= 
         NAV Y UL 
@@ -1129,11 +1130,33 @@ footer {
         width: fit-content;
     }
 
+
+    /* =============================
+       SECCIÓN 1 - SOBRE EL FESTIVAL
+       ============================= */
     .contador { 
-    width: fit-content; 
-    gap: 12px;       
-    padding: 16px;   /* Padding más ajustado para mobile/tablet */
-    margin: 0 auto;
+        width: fit-content; 
+        gap: 12px;       
+        padding: 16px;   
+        margin: 0 auto;
+    }
+
+
+    /* =====================================
+       SECCIÓN 4 - BENEFICIOS DE REGISTRARTE
+       ===================================== */
+    .contenedorTarjetas {
+        flex-direction: column;
+        align-items: center; /* Centra las tarjetas en la pantalla */
+        gap: 32px;
+    }
+
+    .tarjeta {
+        max-width: 402px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        box-sizing: border-box;
     }
 }
 
@@ -1141,6 +1164,15 @@ footer {
    RESPONSIVE - 980px 
    ================== */
 @media (max-width: 980px) {
+    .seccion1, .seccion2, .seccion3, .seccion4, .formulario {
+        padding: 48px 24px; 
+        width: 100%;
+    }
+
+
+    /* ========= 
+         HEADER 
+       ========= */
     header {
         padding: 0px 24px;
     }
@@ -1149,12 +1181,6 @@ footer {
     height: 28px;
     }
 
-    .seccion1, .seccion2, .seccion3, .seccion4, .formulario {
-        padding: 48px 24px; /* Reducimos un poco el padding lateral */
-        width: 100%;
-        overflow: hidden; /* Corta cualquier sombra que quiera escaparse */
-        box-sizing: border-box;
-    }
 
     /* ========= 
         PORTADA 
@@ -1175,15 +1201,13 @@ footer {
         margin-top: 48px;
     }
 
-    h1 { font-size: 44px; text-align: center;}
+    h1 { font-size: 48px; text-align: center;}
     h2 { font-size: 36px; }
 
 
     /* =============================
        SECCIÓN 1 - SOBRE EL FESTIVAL
        ============================= */
-    .seccion1  { padding: 60px 32px; }
-
     .grillaSec1 {                        
         flex-direction: column;
         align-items: center;
@@ -1200,27 +1224,28 @@ footer {
         width: 100%;
         padding: 0 20px;
     }
-
+    
+    /* CONTADOR */
     .seccion-contador { 
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;    /* Centra todo horizontalmente */
+        align-items: center;
         justify-content: center;
-        padding: 40px 0px;
+        padding-top: 40px;
         box-sizing: border-box;
     }
     
     .seccion-contador h2 {
         height: 100%;
         text-align: center;
-        margin-bottom: 24px; /* Le damos aire respecto al contador */
+        margin-bottom: 24px;
     }
 
     .contador { 
         display: flex;
-        flex-direction: row;    /* Las cajas siguen en fila */
-        flex-wrap: nowrap;      /* Que no se corten */
+        flex-direction: row;    
+        flex-wrap: nowrap;      
         width: clamp(550px, 16vw, 243px);
         gap: 12px;       
         padding: 16px;   
@@ -1237,21 +1262,18 @@ footer {
 
     .bloque p {
         font-size: 18px;
-      
-    }    
+    }  
     
 
     /* =====================
        SECCIÓN 2 - UBICACIÓN
        ===================== */
-    .seccion2 { padding: 60px 32px; }
-    .mapa     { height: 300px; }
+    .mapa { height: 300px; }
 
 
     /* ================================
        SECCIÓN 3 - PREGUNTAS FRECUENTES
        ================================ */
-    .seccion3 { padding: 60px 32px; }
     .pregunta-header { padding: 16px 20px; }
     .respuesta { padding: 0 20px; }
     .fila.abierta .respuesta { padding: 16px 20px 32px; }
@@ -1260,10 +1282,6 @@ footer {
     /* =====================================
        SECCIÓN 4 - BENEFICIOS DE REGISTRARTE
        ===================================== */
-    .seccion4 { 
-        padding: 48px 24px; 
-    }
-
     .contenedorTarjetas {
         grid-template-columns: 1fr;
         width: 100%;
@@ -1275,15 +1293,15 @@ footer {
 
     .tarjeta { 
         min-height: 300px;
-        padding: 28px; 
+        padding: 24px; 
         box-sizing: border-box;
     }
-
     
     .tarjeta {
         height: auto;
         min-height:300px;
-    }                                  
+    }        
+
 
     /* ====================== 
        SECCIÓN 5 - FORMULARIO 
@@ -1297,9 +1315,8 @@ footer {
     }
     
     .grillaForm {
-    grid-template-columns: 1fr;
-    padding: 16px;
-    gap: 32px;
+        grid-template-columns: 1fr;
+        gap: 32px;
     }
 
     input[type="submit"] {
@@ -1315,64 +1332,111 @@ footer {
     .boton-submit { font-size: 18px; }
 }
 
+
+/* ================== 
+   RESPONSIVE - 480px 
+   ================== */
 @media (max-width: 480px) {
+    .seccion1, .seccion2, .seccion3, .seccion4, .formulario {
+        padding: 48px 16px;
+        width: 100%;
+    }
+
     h1 { font-size: 48px; }
     h2 { font-size: 32px; }
 
+
+    /* ========= 
+         HEADER 
+       ========= */
     .logo-fest img {
     height: 24px;
     }
 
-    .Portada { padding: 80px 20px 0px; }
+    /* ========= 
+        PORTADA 
+       ========= */
+    .Portada { padding: 120px 20px 40px; }
 
-    .boton-portada { font-size: 15px; padding: 12px 18px; }
+    .boton-portada { font-size: 16px; padding: 12px 18px; }
 
-    .seccion1, .seccion2, .seccion3, .seccion4, .formulario {
-        padding: 48px 16px; /* Reducimos un poco el padding lateral */
-        width: 100%;
-        overflow: hidden; /* Corta cualquier sombra que quiera escaparse */
-        box-sizing: border-box;
+    /* =============================
+       SECCIÓN 1 - SOBRE EL FESTIVAL
+       ============================= */
+    .contenedor-lineup { 
+        padding: 12px;
+        box-shadow: 6px 6px #2C191D;
     }
-
+    
+    /* CONTADOR */
     .seccion-contador {
-        padding: 48px 0; /* Los 16px que querías de margen */
+        padding: 48px 0;
     }
 
     .contador {
-        /* Cambiamos fit-content por un ancho que llene el espacio disponible */
         width: 100%; 
-        max-width: 343px; /* El ancho exacto para que entre en un 375px (375 - 16 - 16) */
-        gap: 8px;         /* Espacio mínimo para que no se peguen */
-        padding: 12px;    /* Menos padding para ganar espacio para las cajas */
+        max-width: 343px;
+        gap: 8px;         
+        padding: 12px; 
         box-shadow: 6px 6px 0px #2C191D;
     }
 
     .caja {
-        /* El cálculo mágico: (343px - padding - gaps) / 4 */
         width: 70px;      
         height: 70px;
-        border-width: 3px; /* Un borde un pelín más fino ayuda visualmente */
+        border-width: 3px;
     }
 
     .caja span {
-        font-size: 32px;   /* Achicamos la tipografía para que no toque los bordes */
+        font-size: 32px;   
     }
 
     .bloque p {
-        font-size: 14px;   /* Etiquetas bien compactas */
+        font-size: 14px;
         margin-top: 4px;
     }
-
+    
+    /* ===================== 
+       SECCIÓN 2 - UBICACIÓN 
+       ===================== */
     .mapa {
-        width: 100% !important; /* Que use el 100% del espacio disponible */
+        width: 100% !important; 
         max-width: 100%;
         margin: 0 auto;
-        box-shadow: 4px 4px 0px #2C191D; /* Sombra más chica para que no empuje */
+        box-shadow: 6px 6px #2C191D;
         box-sizing: border-box;
     }
 
+
+    /* ================================
+       SECCIÓN 3 - PREGUNTAS FRECUENTES
+       ================================ */
+    .grillaFAQ {                           
+        box-shadow: 6px 6px #2C191D;
+    }
+
+    /* =====================================
+       SECCIÓN 4 - BENEFICIOS DE REGISTRARTE
+       ===================================== */
+    .tarjeta {                             
+        box-shadow: 6px 6px #2C191D;
+    }
+
+    .tarjeta:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 10px 10px #2C191D;
+    }
+
+    .tarjeta h4 {
+        font-size: 16px;
+    }
+
+    /* ====================== 
+       SECCIÓN 5 - FORMULARIO 
+       ====================== */
+    .carta {
+        box-shadow: 6px 6px #E4C599;
+    }
     .popup-confirmacion-contenido { padding: 32px 20px; }
     .popup-confirmacion-contenido h2 { font-size: 28px; }
-
-    footer { padding: 24px 16px; }
 }
