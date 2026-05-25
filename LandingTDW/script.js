@@ -1,15 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // LÓGICA PARA LAS FILAS (preguntas frecuentes)
-    const filas = document.querySelectorAll('.fila');
+    const filasFAQ = document.querySelectorAll('.grillaFAQ .fila');
 
-    filas.forEach(fila => {
+    filasFAQ.forEach(fila => {
         fila.addEventListener('click', () => {
             const estaAbierta = fila.classList.contains('abierta');
-
-            filas.forEach(f => f.classList.remove('abierta')); // 1. Cerramos TODAS las filas primero (esta es la clave para que solo haya una abierta)
-
-            if (!estaAbierta) { // 2. Si la fila que clickeamos NO estaba abierta, la abrimos (Si ya estaba abierta, se queda cerrada por el paso anterior)
+            filasFAQ.forEach(f => f.classList.remove('abierta'));
+            if (!estaAbierta) {
                 fila.classList.add('abierta');
             }
         });
@@ -58,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setupDropdown('btn-genero', 'dropdown-genero');
     setupDropdown('btn-fuente', 'dropdown-fuente');
-    
+
     const checkboxes = document.querySelectorAll('input[name="genero"]'); // Actualizar texto del botón géneros (checkboxes)
     const btnGenero = document.getElementById('btn-genero');
 
@@ -87,8 +85,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- LÓGICA PARA LOS DROPDOWNS DEL FORMULARIO ---
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-    // MENU MOBILE — cerrar al hacer click en un link
+    dropdowns.forEach(dropdown => {
+        const btn = dropdown.querySelector('.dropbtn');
+        const content = dropdown.querySelector('.dropdown-content');
+
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evita que se cierre al abrirlo
+            // Opcional: Cierra otros dropdowns si quieres que solo uno esté abierto a la vez
+            document.querySelectorAll('.dropdown-content').forEach(c => {
+                if (c !== content) c.classList.remove('mostrar');
+            });
+            content.classList.toggle('mostrar');
+        });
+
+        // Esto es lo que soluciona tu problema: 
+        // evita que el clic dentro del contenido cierre el dropdown
+        content.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+        });
+    });
+
+    // Cierra los dropdowns si haces clic en cualquier otro lugar de la pantalla
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.dropdown-content').forEach(c => {
+            c.classList.remove('mostrar');
+        });
+    });
+
+
+    // MENU MOBILE - cerrar al hacer click en un link
     const menuCheck = document.getElementById('menu-check');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -122,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (nombre) nombre.classList.add('invalido');
             if (errorNombre) errorNombre.textContent = 'Por favor ingresá tu nombre.';
         }
-        
+
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Validar email
         if (!email || !emailRegex.test(email.value.trim())) {
             valido = false;
@@ -139,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (validarForm()) {
                 abrirPopup(popupConfirmacion);
                 formRegistro.reset();
-                
+
                 if (btnGenero) btnGenero.textContent = 'Seleccionar géneros ▼'; // Resetear textos de dropdowns
                 if (btnFuente) btnFuente.textContent = 'Seleccionar opción ▼';
             }
@@ -175,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const nombre = document.getElementById('nombre');
         const email = document.getElementById('email');
         let error = false;
-      
+
         if (nombre.value.trim() === "") { // Validación simple de nombre
             document.getElementById('error-nombre').innerText = "Por favor, ingresá tu nombre";
             nombre.classList.add('invalido');
@@ -184,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('error-nombre').innerText = "";
             nombre.classList.remove('invalido');
         }
-        
+
         if (email.value.trim() === "") { // Validación simple de email
             document.getElementById('error-email').innerText = "El email es obligatorio";
             email.classList.add('invalido');
@@ -193,10 +221,16 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('error-email').innerText = "";
             email.classList.remove('invalido');
         }
-        
-        if (!error) { // Si no hay errores, mostramos el cartel
-            popup.classList.add('activo');
-            form.reset(); // Limpia el formulario
+
+        if (!error) {
+            const nombreInput = document.getElementById('nombre').value; // 1. CAPTURAR VALORES
+            const emailInput = document.getElementById('email').value;   
+
+            document.getElementById('nombre-usuario').innerText = nombreInput; // 2. INYECTAR DATOS EN EL POPUP
+            document.getElementById('mail-usuario').innerText = emailInput;
+
+            popup.classList.add('activo'); // 3. MOSTRAR POPUP
+            form.reset();
         }
     });
 
@@ -205,9 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
-    /* ANIMACION APARICIÓN */
-const revealEls = document.querySelectorAll(
+    // ANIMACION APARICIÓN
+    const revealEls = document.querySelectorAll(
         '.reveal-fade-up, .reveal-slide-left, .reveal-slide-right'
     );
 
@@ -221,8 +254,7 @@ const revealEls = document.querySelectorAll(
     }, { threshold: 0.12 });
 
     revealEls.forEach(el => revealObserver.observe(el));
-
-    /* FIN DE ANIMACION APARICIÓN */
+    // FIN DE ANIMACION APARICIÓN
 
 });
 

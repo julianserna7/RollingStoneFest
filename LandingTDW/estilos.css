@@ -259,6 +259,12 @@ header nav a:not(.boton-nav):hover {
 }
 /* FIN menu (tincho)*/
 
+.deco1, .deco2, .deco3, .deco4, .deco5, .deco6, .deco7, .deco8, .deco9, .deco10, .deco11, .deco12, .deco13, .deco14, .deco15, .deco16, .deco17, .deco18, .deco19 {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
 /* ========= 
     PORTADA 
    ========= */
@@ -267,9 +273,9 @@ header nav a:not(.boton-nav):hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 76vh;
+    height: 72vh;
     margin: 0;
-    padding: 160px 64px 80px 64px; 
+    padding: 160px 64px 80px 64px;
     border-bottom: solid #2C191D 4px;
     color: #2C191D;
     display: flex;
@@ -284,21 +290,18 @@ header nav a:not(.boton-nav):hover {
     z-index: 2;
 }
 
-.deco {
-    position: absolute;
-    width: 400px;
+.deco1 { 
+    width: 350px;
     opacity: 0.85;
-    pointer-events: none;
-    z-index: 0;
+    top: -100px;
+    right: -150px;
 }
 
 .deco2 {
-    position: absolute;
     width: 200px; 
     opacity: 0.95;
-    pointer-events: none; 
-    z-index: 0;
-    
+    bottom: -110px;
+    left: -70px;
 }
 
 .Portada h1 {
@@ -350,6 +353,7 @@ header nav a:not(.boton-nav):hover {
     overflow: hidden;
 }
 
+
 /* ============================= 
    SECCIÓN 1 - SOBRE EL FESTIVAL 
    ============================= */
@@ -378,7 +382,7 @@ header nav a:not(.boton-nav):hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .lineup {
@@ -389,12 +393,17 @@ header nav a:not(.boton-nav):hover {
     display: block;
 }
 
+.lineup-wrapper {
+    position: relative;
+    max-width: 510px;
+    max-height: 638px;
+}
+
 .deco3 {
+    width: 220px;
     position: absolute;
-    width: 280px; 
-    pointer-events: none; 
-    z-index: 1;
-    
+    top: -130px;
+    left: -110px;
 }
 
 .texto {
@@ -420,19 +429,22 @@ header nav a:not(.boton-nav):hover {
     z-index: 2;
 }
 
+.seccion-contador h2 {
+    position: relative;
+    z-index: 1;
+}
+
 .deco4 {
-    position: absolute;
-    width: 380px; 
-    pointer-events: none; 
-    z-index: 0;
+    width: 380px;
+    top: -50px;
+    right: 200px;
 }
 
 .deco5 {
-    position: absolute;
     width: 300px; 
-    pointer-events: none; 
-    z-index: 0;
     transform: rotate(30deg);
+    top: 200px;
+    right: -60px;
 }
 
 .contador {                                                    
@@ -448,7 +460,8 @@ header nav a:not(.boton-nav):hover {
     border-radius: 8px;
     box-shadow: 8px 8px 0px #2C191D;
     padding: 24px;
-    z-index: 2;
+    position: relative;
+    z-index: 1;
 }
 
 .caja {                                
@@ -493,10 +506,9 @@ header nav a:not(.boton-nav):hover {
 }
 
 .deco6 {
-    position: absolute;
-    width: 380px; 
-    pointer-events: none; 
-    z-index: 0;
+    width: 380px;
+    top: -180px;
+    right: 1680px;
 }
 
 .mapa {
@@ -521,17 +533,15 @@ header nav a:not(.boton-nav):hover {
 }
 
 .deco7 {
-    position: absolute;
-    width: 220px; 
-    pointer-events: none; 
-    z-index: 0;
+    width: 220px;
+    top: 55px;
+    right: 248px;
 }
 
 .deco8 {
-    position: absolute;
-    width: 330px; 
-    pointer-events: none; 
-    z-index: 0;
+    width: 330px;
+    top: 388px;
+    left: 141px;
 }
 
 
@@ -543,26 +553,23 @@ header nav a:not(.boton-nav):hover {
 }
 
 .deco9 {
-    position: absolute;
     width: 330px; 
-    pointer-events: none; 
-    z-index: 0;
     transform: rotate(13deg);
+    top: -105px;
+    right: -80px;
 }
 
 .deco10 {
-    position: absolute;
     width: 330px; 
-    pointer-events: none; 
-    z-index: 0;
     transform: rotate(3deg);
+    top: 520px;
+    left: -80px;
 }
 
 .deco11 {
-    position: absolute;
-    width: 330px; 
-    pointer-events: none; 
-    z-index: 0;
+    width: 330px;
+    top: 445px;
+    right: 90px;
 }
 
 /* GRILLA PREGUNTAS */
@@ -668,37 +675,30 @@ header nav a:not(.boton-nav):hover {
 .seccion4 {
     background-color: #F69A45;
     border-bottom: solid #D15231 4px;
-    position: relative;
-    z-index: 2;
 }
 
-
 .deco16 {
-    position: absolute;
-    width: 360px; 
-    pointer-events: none; 
-    z-index: 0;
+    width: 360px;
+    top: -213px;
+    right: -150px;
 }
 
 .deco17 {
-    position: absolute;
-    width: 360px; 
-    pointer-events: none; 
-    z-index: 0;
+    width: 360px;
+    top: 20px;
+    left: 317px;
 }
 
 .deco18 {
-    position: absolute;
-    width: 360px; 
-    pointer-events: none; 
-    z-index: 0;
+    width: 260px;
+    bottom: -160px;
+    left: 0px;
 }
 
 .deco19 {
-    position: absolute;
-    width: 261px; 
-    pointer-events: none; 
-    z-index: 0;
+    width: 260px;
+    bottom: -160px;
+    right: 0px;
 }
 
 /* TARJETAS */
@@ -769,32 +769,28 @@ header nav a:not(.boton-nav):hover {
 }
 
 .deco12 {
-    position: absolute;
-    width: 330px; 
-    pointer-events: none; 
-    z-index: 0;
+    width: 330px;
+    bottom: 415px;
+    right: -500px;
 }
 
 .deco13 {
-    position: absolute;
-    width: 330px; 
-    pointer-events: none; 
-    z-index: 0;
+    width: 330px;
+    top: 395px;
+    right: 1245px;
 }
 
 .deco14 {
-    position: absolute;
     width: 125px; 
-    pointer-events: none; 
-    z-index: 0;
     transform: rotate(30deg);
+    top: -60px;
+    right: 969px;
 }
 
 .deco15 {
-    position: absolute;
-    width: 395px; 
-    pointer-events: none; 
-    z-index: 0;
+    width: 395px;
+    bottom: -30px;
+    right: -150px;
 }
 
 .carta {
@@ -1040,6 +1036,7 @@ input[type="email"].invalido {
 .boton-popup-ok {
     background-color: #D15231;
     color: #E4C599;
+    margin-top: 30px;
     border: 3px solid #2C191D;
     border-radius: 8px;
     box-shadow: 4px 4px #2C191D;
@@ -1231,6 +1228,13 @@ footer {
     /* =============================
        SECCIÓN 1 - SOBRE EL FESTIVAL
        ============================= */
+    .deco3 {
+        display: block;
+        width: 160px;
+        top: -100px;
+        left: -80px;
+    }
+
     .grillaSec1 {                        
         flex-direction: column;
         align-items: center;
