@@ -576,7 +576,7 @@ header nav a:not(.boton-nav):hover { color: #D15231; }
 }
 
 .deco17 {
-    width: 360px;
+    width: 340px;
     top: 20px;
     left: 317px;
 }
@@ -1206,7 +1206,7 @@ footer {
     
     h2 { font-size: 32px; }
 
-    .deco1, .deco2, .deco3, .deco4, .deco5, .deco6, .deco7, .deco8, .deco9, .deco10, .deco11, .deco12, .deco13, .deco14, .deco15, .deco16, .deco17, .deco18, .deco19 {
+    .deco1, .deco3, .deco4, .deco5, .deco6, .deco7, .deco8, .deco9, .deco10, .deco11, .deco12, .deco13, .deco14, .deco15, .deco16, .deco17, .deco18, .deco19 {
         max-width: 205px;
     }
 
@@ -1232,7 +1232,11 @@ footer {
 
     .deco1 { top: -30px; right: -80px; }
 
-    .deco2 { bottom: -120px; left: -80px; }
+    .deco2 { 
+        bottom: -120px; 
+        left: -80px; 
+        max-width: 195px; 
+    }
 
 
     /* =============================
