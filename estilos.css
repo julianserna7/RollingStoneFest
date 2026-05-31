@@ -802,6 +802,29 @@ input[type="text"].invalido, input[type="email"].invalido {
     border-radius: 8px;
     color: #666;
     transition: border-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.dropbtn::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2.5px solid #2C191D;
+    border-bottom: 2.5px solid #2C191D;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 8px;
+    margin-bottom: 3px;
+}
+
+.dropdown:has(.dropdown-content.mostrar) .dropbtn::after {
+    transform: rotate(-135deg);
+    margin-bottom: -3px;
 }
 
 .dropbtn:focus { border-color: #D15231; outline: none; }

@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (btnGenero) {
                 btnGenero.textContent = seleccionados.length > 0
-                    ? seleccionados.join(', ') + ' ▼'
-                    : 'Seleccionar géneros ▼';
+                    ? seleccionados.join(', ')
+                    : 'Seleccionar géneros';
             }
         });
     });
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     radios.forEach(rd => {
         rd.addEventListener('change', () => {
             if (rd.checked && btnFuente) {
-                btnFuente.textContent = rd.parentElement.textContent.trim() + ' ▼';
+                btnFuente.textContent = rd.parentElement.textContent.trim();
             }
         });
     });
@@ -168,8 +168,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 abrirPopup(popupConfirmacion);
                 formRegistro.reset();
 
-                if (btnGenero) btnGenero.textContent = 'Seleccionar géneros ▼'; // Resetear textos de dropdowns
-                if (btnFuente) btnFuente.textContent = 'Seleccionar opción ▼';
+                if (btnGenero) btnGenero.textContent = 'Seleccionar géneros';
+                if (btnFuente) btnFuente.textContent = 'Seleccionar opción';
             }
         });
     }
@@ -257,5 +257,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // FIN DE ANIMACION APARICIÓN
 
 });
-
-
